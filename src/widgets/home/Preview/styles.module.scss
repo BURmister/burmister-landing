@@ -1,0 +1,44 @@
+.header {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+
+   .title {
+      grid-column-start: 3;
+      grid-column-end: 9;
+   }
+}
+
+.section {
+   padding: 24px 0;
+   height: 100dvh;
+   gap: unset;
+}
+
+.content {
+   flex: 1;
+   padding: min(6dvh, var(--block-gap)) 0;
+   min-height: 0;
+   justify-content: center;
+   gap: var(--small-gap);
+
+   .imageWrapper {
+      min-height: 0;
+
+      .image {
+         max-height: 100%;
+      }
+   }
+
+   .text {
+      flex-shrink: 0;
+      gap: var(--small-gap);
+
+      .author {
+         margin-left: auto;
+      }
+   }
+}
+
+.footer {
+   gap: 8px;
+}

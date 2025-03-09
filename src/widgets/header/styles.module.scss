@@ -1,0 +1,15 @@
+.header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+
+   .wrapper {
+      padding: 24px 0;
+      justify-content: space-between;
+      align-items: center;
+
+      .actions {
+         gap: var(--small-gap);
+      }
+   }
+}

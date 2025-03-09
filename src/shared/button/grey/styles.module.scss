@@ -1,0 +1,11 @@
+.button {
+   padding: var(--action-padding);
+   transition: all 0.05s ease-in;
+
+   @media (pointer: fine) {
+      &:hover {
+         background-color: var(--white);
+         transition: all 0.05 ease-out;
+      }
+   }
+}

@@ -1,0 +1,91 @@
+:root {
+   font-family: 'Aeonik', sans-serif;
+}
+
+.caption {
+   &-96 {
+      font-size: 96px;
+      line-height: 100%;
+   }
+
+   &-64 {
+      font-size: 64px;
+      line-height: 100%;
+   }
+
+   &-44 {
+      font-size: 44px;
+      line-height: 100%;
+
+      @media (max-width: 1919px) {
+         font-size: 40px;
+      }
+   }
+}
+
+.text {
+   &-black {
+      color: var(--black);
+   }
+
+   &-white {
+      color: var(--white);
+   }
+
+   &-grey {
+      color: var(--grey-3);
+   }
+
+   &-blue {
+      color: var(--blue);
+   }
+
+
+   &-32 {
+      font-size: 32px;
+      line-height: 120%;
+   }
+
+   &-28 {
+      font-size: 28px;
+      line-height: 120%;
+
+      @media (max-width: 1919px) {
+         font-size: 24px;
+      }
+   }
+
+   &-24 {
+      font-size: 24px;
+      line-height: 120%;
+
+      @media (max-width: 1919px) {
+         font-size: 20px;
+      }
+   }
+
+   &-20 {
+      font-size: 20px;
+      line-height: 120%;
+
+      @media (max-width: 1919px) {
+         font-size: 18px;
+      }
+   }
+
+   &-light {
+      font-weight: 300;
+   }
+
+   &-regular {
+      font-weight: 400;
+   }
+
+   &-bold {
+      font-weight: 700;
+   }
+
+   &-center {
+      text-align: center;
+   }
+}
