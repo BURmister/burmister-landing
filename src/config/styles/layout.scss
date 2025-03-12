@@ -7,11 +7,12 @@
    // gaps
    --page-gap: 220px;
    --section-gap: 142px;
-   --block-gap: 90px;
+   --block-gap: 80px;
    --small-gap: 24px;
 
    @media (max-width: 1919px) {
       --wrapper-width: 1280px;
+      --page-gap: 164px;
    }
 
    @media (max-width: 1439px) {
@@ -64,6 +65,10 @@ main {
 header,
 footer {
    flex: 0 0 auto;
+}
+
+.page {
+   gap: var(--page-gap);
 }
 
 .content-wrapper {

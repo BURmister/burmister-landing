@@ -5,7 +5,8 @@
    --header-height: 101px;
 }
 
-img {
+img,
+video {
    width: 100%;
    height: auto;
    object-fit: cover;
@@ -25,6 +26,10 @@ img {
 
    &-32 {
       border-radius: 32px;
+   }
+
+   &-24 {
+      border-radius: 24px;
    }
 }
 

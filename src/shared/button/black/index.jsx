@@ -7,7 +7,7 @@ const ButtonBlack = ({ children, callback, ...props }) => {
    };
 
    return (
-      <button className={`text-20 text-white background-black rounded-90 ${styles.button}`} {...props} onClick={() => onClick()}>
+      <button className={`w-fit text-20 text-white background-black rounded-90 ${styles.button}`} {...props} onClick={() => onClick()}>
          {children}
       </button>
    );

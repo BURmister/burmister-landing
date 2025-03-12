@@ -5,13 +5,13 @@ const Section = ({ header, children, footer, legend, className }) => {
       <section className={`${styles.section} ${className && className} flex flex-col`}>
          {header && header}
          {children}
-         {footer ? (
-            footer
-         ) : (
-            <div className={`content-wrapper ${styles.footer} flex justify-center`}>
-               <p className={`text-24 w-fit`}>{legend}</p>
-            </div>
-         )}
+         {footer
+            ? footer
+            : legend && (
+                 <div className={`content-wrapper ${styles.footer} flex justify-center`}>
+                    <p className={`text-24 w-fit`}>{legend}</p>
+                 </div>
+              )}
       </section>
    );
 };

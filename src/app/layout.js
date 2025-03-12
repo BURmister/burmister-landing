@@ -2,6 +2,7 @@ import '@config/styles/index.css';
 import '@config/styles/global.scss';
 
 import Header from '@widgets/header';
+import ScrollIndicator from '@widgets/indicator';
 
 export const metadata = {
    title: 'burmister',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <html lang="ru">
          <body>
             <Header />
+            {/* <ScrollIndicator /> */}
             <main>{children}</main>
          </body>
       </html>

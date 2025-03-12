@@ -1,0 +1,23 @@
+.section {
+   .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .mediaWrapper {
+         margin-right: calc(var(--block-gap) * 2);
+
+         .media {
+            height: 420px;
+
+            @media (max-width: 1919px) {
+               height: 280px;
+            }
+         }
+      }
+
+      .textWrapper {
+         gap: var(--block-gap);
+      }
+   }
+
+}

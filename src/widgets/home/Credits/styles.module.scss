@@ -1,0 +1,23 @@
+.section {
+   // --section-padding-top: var(--block-gap);
+   --section-padding-bottom: 0;
+
+   .wrapper {
+      .background {
+         top: var(--section-gap);
+         height: calc(100dvh - var(--section-gap) * 2);
+         z-index: 1;
+      }
+
+      .content {
+         padding-top: 25dvh;
+         padding-bottom: 50svh;
+         gap: 30dvh;
+         z-index: 2;
+
+         .sublist {
+            gap: var(--block-gap);
+         }
+      }
+   }
+}

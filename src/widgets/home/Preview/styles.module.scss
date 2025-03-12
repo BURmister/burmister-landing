@@ -3,15 +3,19 @@
    grid-template-columns: repeat(12, 1fr);
 
    .title {
-      grid-column-start: 3;
+      grid-column-start: 4;
       grid-column-end: 9;
    }
 }
 
 .section {
-   padding: 24px 0;
+   padding-top: 24px;
    height: 100dvh;
    gap: unset;
+
+   @media (max-width: 1919px) {
+      padding-top: 26px;
+   }
 }
 
 .content {

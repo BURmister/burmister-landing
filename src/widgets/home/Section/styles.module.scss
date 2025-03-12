@@ -1,5 +1,5 @@
 .section {
-   padding-top: var(--home-section-padding-top);
-   padding-bottom: var(--home-section-padding-bottom);
+   padding-top: var(--section-padding-top);
+   padding-bottom: var(--section-padding-bottom, 24px);
    gap: var(--section-gap);
 }
