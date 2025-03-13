@@ -5,13 +5,14 @@
    .wrapper {
       .background {
          top: var(--section-gap);
+         // margin-bottom: var(--section-gap);
          height: calc(100dvh - var(--section-gap) * 2);
          z-index: 1;
       }
 
       .content {
-         padding-top: 25dvh;
-         padding-bottom: 50svh;
+         padding-top: var(--section-gap);
+         padding-bottom: calc(100dvh - var(--section-gap));
          gap: 30dvh;
          z-index: 2;
 

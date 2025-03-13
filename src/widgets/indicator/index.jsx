@@ -8,15 +8,13 @@ export default function ScrollIndicator() {
    const { scrollYProgress } = useScroll();
    const { height: windowHeight } = useWindowSize(); // Следим за высотой окна
 
-   const [isVisible, setIsVisible] = useState(false);
+   const [isVisible, setIsVisible] = useState(true);
    const [indicatorHeight, setIndicatorHeight] = useState(20); // Начальная высота индикатора
    const scrollContainerRef = useRef(null);
    const timeoutRef = useRef(null);
 
-   const scrollbarHeight = 50 * (windowHeight / 100); // 50dvh в пикселях
-   const maxTranslateY = scrollbarHeight - indicatorHeight;
-
-   const translateY = useTransform(scrollYProgress, [0, 1], ['0px', `${maxTranslateY}px`]);
+   const scrollbarHeight = 50 * (windowHeight / 100);
+   const translateY = useTransform(scrollYProgress, [0, 1], ['0%', `100%`]);
 
    const updateIndicatorHeight = useCallback(() => {
       if (!scrollContainerRef.current) return;
@@ -47,7 +45,9 @@ export default function ScrollIndicator() {
          initial={{ opacity: 0 }}
          animate={{ opacity: isVisible ? 1 : 0 }}
          transition={{ duration: 0.3, ease: 'easeInOut' }}>
-         <motion.div className="w-full rounded-90 background-black" style={{ translateY, height: `${indicatorHeight}px` }} />
+         <motion.div className="w-full" style={{ translateY, height: `calc(100% - ${indicatorHeight}px)` }}>
+            <motion.div className="w-full rounded-90 background-black" style={{ height: `${indicatorHeight}px` }} />
+         </motion.div>
       </motion.div>
    );
 }

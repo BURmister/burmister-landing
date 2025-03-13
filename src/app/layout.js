@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <html lang="ru">
          <body>
             <Header />
-            {/* <ScrollIndicator /> */}
+            <ScrollIndicator />
             <main>{children}</main>
          </body>
       </html>

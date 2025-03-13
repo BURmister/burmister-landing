@@ -22,7 +22,7 @@ const Beyond = () => {
                <Video className={styles.media} src="/mock/gt3rs.mp4" type="video/mp4" />
             </div>
             <div className={`flex flex-col ${styles.textWrapper}`}>
-               <p className={`text-24 text-pretty ${styles.text}`}>
+               <p className={`text-24 text-pretty`}>
                   Создаю решения, которые выходят за пределы возможного, объединяя креативные идеи и современные технологии. <br />
                   Всё это работает на рост бизнеса и достижение поставленных целей. Мой опыт — это веб- и мобильная разработка, управление командами,
                   стратегическое планирование и переговоры
