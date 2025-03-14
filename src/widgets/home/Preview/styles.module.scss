@@ -9,12 +9,12 @@
 }
 
 .section {
-   padding-top: 24px;
+   --section-padding-top: 24px;
+   --section-gap: 0;
    height: 100dvh;
-   gap: unset;
 
    @media (max-width: 1919px) {
-      padding-top: 26px;
+      --section-padding-top: 26px;
    }
 }
 

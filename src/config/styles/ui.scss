@@ -19,6 +19,10 @@ video {
    -ms-user-select: none;
 }
 
+button {
+   cursor: pointer;
+}
+
 .rounded {
    &-90 {
       border-radius: 90px;

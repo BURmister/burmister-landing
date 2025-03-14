@@ -1,0 +1,16 @@
+.scrollbar {
+   --width: 6px;
+
+   top: 25dvh;
+   right: 24px;
+   height: 50dvh;
+   width: var(--width);
+
+   .wrapper {
+      width: var(--width);
+
+      .indicator {
+         width: var(--width);
+      }
+   }
+}

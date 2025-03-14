@@ -4,6 +4,8 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 import { useWindowSize } from 'react-use';
 
+import styles from './styles.module.scss';
+
 export default function ScrollIndicator() {
    const { scrollYProgress } = useScroll();
    const { height: windowHeight } = useWindowSize(); // Следим за высотой окна
@@ -40,13 +42,13 @@ export default function ScrollIndicator() {
 
    return (
       <motion.div
-         className="fixed rounded-90 overflow-hidden right-4 top-[25dvh] h-[50dvh] w-[6px] background-grey"
+         className={`${styles.scrollbar} fixed rounded-90 overflow-hidden background-grey`}
          ref={scrollContainerRef}
          initial={{ opacity: 0 }}
          animate={{ opacity: isVisible ? 1 : 0 }}
          transition={{ duration: 0.3, ease: 'easeInOut' }}>
-         <motion.div className="w-full" style={{ translateY, height: `calc(100% - ${indicatorHeight}px)` }}>
-            <motion.div className="w-full rounded-90 background-black" style={{ height: `${indicatorHeight}px` }} />
+         <motion.div className={`${styles.wrapper}`} style={{ translateY, height: `calc(100% - ${indicatorHeight}px)` }}>
+            <motion.div className={`${styles.indicator} rounded-90 background-black`} style={{ height: `${indicatorHeight}px` }} />
          </motion.div>
       </motion.div>
    );

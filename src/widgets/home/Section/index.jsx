@@ -1,8 +1,8 @@
 import styles from './styles.module.scss';
 
-const Section = ({ header, children, footer, legend, className }) => {
+const Section = ({ header, children, footer, legend, className, ...props }) => {
    return (
-      <section className={`${styles.section} ${className && className} flex flex-col`}>
+      <section className={`${styles.section} ${className && className} flex flex-col`} {...props}>
          {header && header}
          {children}
          {footer
