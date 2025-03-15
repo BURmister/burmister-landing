@@ -1,4 +1,4 @@
-import { Preview, Beyond, Credits, Experience, Statistics } from '@widgets/home';
+import { Preview, Beyond, Credits, Experience, Statistics, LetsDoIt } from '@widgets/home';
 
 export default function Home() {
    return (
@@ -8,6 +8,7 @@ export default function Home() {
          <Credits />
          <Experience />
          <Statistics />
+         <LetsDoIt />
       </div>
    );
 }

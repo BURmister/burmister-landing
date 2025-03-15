@@ -1,0 +1,32 @@
+.footer {
+   padding-top: var(--page-gap);
+   padding-bottom: calc(var(--small-gap) * 0.5);
+   gap: calc(var(--page-gap) * 1);
+
+   .top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .contacts {
+         margin-right: var(--block-gap);
+         gap: calc(var(--block-gap) * 0.75);
+
+         .logo {
+            flex: 1;
+         }
+
+         .network {
+            gap: calc(var(--block-gap) * 0.5);
+         }
+      }
+   }
+
+   .bottom {
+      gap: var(--small-gap);
+
+      .copyrightWrapper {
+         justify-content: space-between;
+         align-items: center;
+      }
+   }
+}
