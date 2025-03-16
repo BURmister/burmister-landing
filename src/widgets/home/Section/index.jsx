@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 import styles from './styles.module.scss';
 
 const Section = ({ header, children, footer, legend, className, ...props }) => {
@@ -9,7 +10,7 @@ const Section = ({ header, children, footer, legend, className, ...props }) => {
             ? footer
             : legend && (
                  <div className={`content-wrapper ${styles.footer} flex justify-center`}>
-                    <p className={`text-24 w-fit`}>{legend}</p>
+                    <p className={`text-24 w-fit`}>{parse(legend)}</p>
                  </div>
               )}
       </section>

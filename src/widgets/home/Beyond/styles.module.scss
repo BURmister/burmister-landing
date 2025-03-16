@@ -16,6 +16,7 @@
       }
 
       .textWrapper {
+         padding-top: calc(var(--block-gap) * 0.5);
          gap: var(--block-gap);
       }
    }

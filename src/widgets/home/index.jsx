@@ -6,3 +6,4 @@ export { default as Experience } from './Experience';
 export { default as Statistics } from './Statistics';
 export { default as LetsDoIt } from './LetsDoIt';
 export { default as Portfolio } from './Portfolio';
+export { default as Value } from './Value';

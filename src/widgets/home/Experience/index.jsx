@@ -8,8 +8,8 @@ import styles from './styles.module.scss';
 const Header = () => {
    return (
       <div className={`content-wrapper ${styles.header} flex flex-col`}>
-         <p className={`caption-96 ${styles.title}`}>Материальное — </p>
-         <p className={`caption-96 italic ${styles.title}`}>результат созидания</p>
+         <h2 className={`caption-96 ${styles.title}`}>Материальное — </h2>
+         <h2 className={`caption-96 italic ${styles.title}`}>результат созидания</h2>
       </div>
    );
 };
@@ -19,7 +19,7 @@ const Experience = () => {
       <Section className={`${styles.section}`} header={<Header />} legend={'мои проекты — материализованная мысль'}>
          <div className={`content-wrapper ${styles.content} flex`}>
             <div className={`${styles.mediaWrapper}`}>
-               <Video className={styles.media} src="/mock/gt3rs.mp4" type="video/mp4" />
+               <Video className={styles.media} src="/mock/gt3rs-2.mp4" type="video/mp4" />
             </div>
             <div className={`flex flex-col ${styles.textWrapper}`}>
                <div className={`flex flex-col ${styles.text}`}>
