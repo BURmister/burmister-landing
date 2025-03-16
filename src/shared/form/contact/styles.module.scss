@@ -1,0 +1,11 @@
+.form {
+   gap: calc(var(--small-gap) - 4px);
+
+   .row {
+      gap: calc(var(--small-gap) - 4px);
+   }
+
+   .textarea {
+      flex: 1;
+   }
+}

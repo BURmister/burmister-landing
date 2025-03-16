@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { ContactForm } from '@shared/form';
+
 import styles from './styles.module.scss';
 
 const Footer = () => {
@@ -37,7 +39,7 @@ const Footer = () => {
                   </div>
                </div>
             </div>
-            <div className={`${styles.form} flex`}>form</div>
+            <ContactForm className={`${styles.form} flex`} />
          </div>
          <div className={`content-wrapper ${styles.wrapper} ${styles.bottom} flex flex-col`}>
             <div className={`${styles.copyrightWrapper} flex`}>

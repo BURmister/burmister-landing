@@ -1,15 +1,11 @@
-import { ButtonBlack } from '@/src/shared/button';
-import { Video } from '@/src/shared/media';
-
 import Section from '@widgets/home/Section';
-
 import styles from './styles.module.scss';
 
 const Header = () => {
    return (
       <div className={`content-wrapper ${styles.header} flex flex-col`}>
-         <p className={`caption-96 ${styles.title}`}>Уникальный подход — </p>
-         <p className={`caption-96 italic ${styles.title}`}>уникальный результат</p>
+         <h2 className={`caption-96 ${styles.title}`}>Уникальный подход — </h2>
+         <h2 className={`caption-96 italic ${styles.title}`}>уникальный результат</h2>
       </div>
    );
 };

@@ -10,7 +10,7 @@ export default function ScrollIndicator() {
    const { scrollYProgress } = useScroll();
    const { height: windowHeight } = useWindowSize(); // Следим за высотой окна
 
-   const [isVisible, setIsVisible] = useState(true);
+   const [isVisible, setIsVisible] = useState(false);
    const [indicatorHeight, setIndicatorHeight] = useState(20); // Начальная высота индикатора
    const scrollContainerRef = useRef(null);
    const timeoutRef = useRef(null);

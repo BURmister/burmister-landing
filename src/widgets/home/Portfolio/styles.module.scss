@@ -1,0 +1,7 @@
+.section {
+   --section-paddding-bottom: 0;
+}
+
+.header {
+   gap: calc(var(--small-gap) * 0.5);
+}
