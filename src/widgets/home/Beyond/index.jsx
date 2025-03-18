@@ -2,17 +2,9 @@ import { ButtonBlack } from '@/src/shared/button';
 import { Video } from '@/src/shared/media';
 
 import Section from '@widgets/home/Section';
+import Header from './Header';
 
 import styles from './styles.module.scss';
-
-const Header = () => {
-   return (
-      <div className={`content-wrapper ${styles.header} flex flex-col`}>
-         <h2 className={`caption-96 ${styles.title}`}>Рамки исчезают с началом</h2>
-         <h2 className={`caption-96 italic ${styles.title}`}>настоящего мышления</h2>
-      </div>
-   );
-};
 
 const Beyond = () => {
    return (

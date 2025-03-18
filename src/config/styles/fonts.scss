@@ -5,16 +5,16 @@
 .caption {
    &-96 {
       font-size: 96px;
-      line-height: 100%;
+      line-height: 110%;
 
       @media (max-width: 1919px) {
-         font-size: 84px
+         font-size: 74px
       }
    }
 
    &-64 {
       font-size: 64px;
-      line-height: 100%;
+      line-height: 120%;
 
       @media (max-width: 1919px) {
          font-size: 52px;
@@ -23,7 +23,7 @@
 
    &-44 {
       font-size: 44px;
-      line-height: 100%;
+      line-height: 120%;
 
       @media (max-width: 1919px) {
          font-size: 40px;

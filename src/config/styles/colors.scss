@@ -7,6 +7,10 @@
    --blue-light: #d3d9ff99;
 }
 
+*:focus-visible {
+   outline: 2px solid var(--black);
+}
+
 .background {
    &-grey {
       background-color: var(--grey);

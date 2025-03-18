@@ -2,17 +2,8 @@ import { ButtonBlack } from '@/src/shared/button';
 import { Video } from '@/src/shared/media';
 
 import Section from '@widgets/home/Section';
-
+import Header from './Header';
 import styles from './styles.module.scss';
-
-const Header = () => {
-   return (
-      <div className={`content-wrapper ${styles.header} flex flex-col`}>
-         <h2 className={`caption-96 ${styles.title}`}>Материальное — </h2>
-         <h2 className={`caption-96 italic ${styles.title}`}>результат созидания</h2>
-      </div>
-   );
-};
 
 const Experience = () => {
    return (

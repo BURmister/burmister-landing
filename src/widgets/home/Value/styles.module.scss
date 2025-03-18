@@ -4,7 +4,10 @@
       grid-template-columns: repeat(2, 1fr);
 
       .mediaWrapper {
+         position: sticky;
+         top: var(--small-gap);
          margin-left: calc(var(--block-gap) * 2);
+         max-height: calc(100dvh - var(--small-gap) * 2);
 
          .media {
             position: absolute;
@@ -22,8 +25,4 @@
       }
    }
 
-}
-
-.header {
-   gap: calc(var(--small-gap) * 0.5);
 }

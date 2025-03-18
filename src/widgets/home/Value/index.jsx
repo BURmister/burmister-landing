@@ -1,23 +1,12 @@
-import { ButtonBlack } from '@/src/shared/button';
-import { Video } from '@/src/shared/media';
-
+import { Video } from '@shared/media';
 import Section from '@widgets/home/Section';
-
+import Header from './Header';
 import styles from './styles.module.scss';
-
-const Header = () => {
-   return (
-      <div className={`content-wrapper ${styles.header} flex flex-col`}>
-         <h2 className={`caption-96 ${styles.title}`}>Идеи реализуются действиями</h2>
-         <p className={`text-24 ${styles.title}`}>Что получит ваш бизнес?</p>
-      </div>
-   );
-};
 
 const Value = () => {
    return (
       <Section className={`${styles.section}`} header={<Header />}>
-         <div className={`content-wrapper ${styles.content} flex`}>
+         <div className={`relative content-wrapper ${styles.content} flex`}>
             <div className={`flex flex-col ${styles.textWrapper}`}>
                <div className={`flex flex-col ${styles.text}`}>
                   <h3 className={`caption-64`}>Стратегическое видение</h3>
@@ -40,7 +29,7 @@ const Value = () => {
                   </p>
                </div>
             </div>
-            <div className={`relative ${styles.mediaWrapper}`}>
+            <div className={`${styles.mediaWrapper}`}>
                <Video className={`${styles.media}`} src="/mock/race.mp4" type="video/mp4" />
             </div>
          </div>
