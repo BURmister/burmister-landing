@@ -13,19 +13,19 @@ const containerVariants = {
 };
 
 const pVariants = {
-   hidden: { opacity: 0, y: 50 },
+   hidden: { y: '100%' },
    visible: {
-      opacity: 1,
       y: 0,
+      rotate: 0,
       transition: { duration: 0.6, ease: 'easeIn' }, // Плавный выход
    },
 };
 
 const h2Variants = {
-   hidden: { opacity: 0, y: 50 }, // Стартовое состояние (скрыт, внизу)
+   hidden: { y: '100%' },
    visible: {
-      opacity: 1,
       y: 0,
+      rotate: 0,
       transition: { duration: 0.4, ease: 'easeIn' }, // Плавное появление
    },
 };

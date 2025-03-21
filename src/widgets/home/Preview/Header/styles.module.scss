@@ -1,0 +1,9 @@
+.header {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+
+   .titleWrapper {
+      grid-column-start: 4;
+      grid-column-end: 9;
+   }
+}

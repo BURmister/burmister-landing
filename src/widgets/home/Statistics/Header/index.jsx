@@ -13,11 +13,15 @@ const containerVariants = {
 };
 
 const pVariants = {
-   hidden: { opacity: 0, x: 123 },
+   hidden: { y: '100%', x: 64 }, // Стартовое состояние (скрыт, внизу)
    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.4, ease: 'easeOut' }, // Плавный выход
+      y: 0,
+      x: 64,
+      transition: { duration: 0.5, ease: 'easeOut' }, // Плавное появление
+   },
+   shifted: {
+      x: 0, // Смещение вправо
+      transition: { duration: 0.6, ease: 'easeInOut', delay: 0.5 }, // Ждём 1s перед сдвигом
    },
 };
 
@@ -33,8 +37,8 @@ const Header = () => {
             <motion.h2
                className={`caption-96 ${styles.title} ${styles.first}`}
                variants={pVariants}
-               initial={pVariants.hidden}
-               whileInView={pVariants.visible}
+               initial="hidden"
+               whileInView={['visible', 'shifted']}
                viewport={{ once: true }}>
                Уникальный подход —
             </motion.h2>
@@ -43,8 +47,8 @@ const Header = () => {
             <motion.h2
                className={`caption-96 italic ${styles.title} ${styles.second}`}
                variants={pVariants}
-               initial={pVariants.hidden}
-               whileInView={pVariants.visible}
+               initial="hidden"
+               whileInView={['visible', 'shifted']}
                viewport={{ once: true }}>
                уникальный результат
             </motion.h2>

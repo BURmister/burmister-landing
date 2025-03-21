@@ -1,14 +1,8 @@
 import Image from 'next/image';
 import Section from '@widgets/home/Section';
-import styles from './styles.module.scss';
 
-const Header = () => {
-   return (
-      <div className={`content-wrapper ${styles.header}`}>
-         <p className={`caption-44 ${styles.title}`}>Создаю решения, которые двигают ваш бизнес вперёд</p>
-      </div>
-   );
-};
+import Header from './Header';
+import styles from './styles.module.scss';
 
 const Footer = () => {
    return (

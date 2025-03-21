@@ -1,13 +1,3 @@
-.header {
-   display: grid;
-   grid-template-columns: repeat(12, 1fr);
-
-   .title {
-      grid-column-start: 4;
-      grid-column-end: 9;
-   }
-}
-
 .section {
    --section-padding-top: 24px;
    --section-gap: 0;
@@ -20,7 +10,8 @@
 
 .content {
    flex: 1;
-   padding: min(6dvh, var(--block-gap)) 0;
+   padding-top: min(6dvh, var(--block-gap));
+   padding-bottom: min(6dvh, var(--block-gap));
    min-height: 0;
    justify-content: center;
    gap: var(--small-gap);

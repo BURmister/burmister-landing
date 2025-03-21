@@ -13,18 +13,16 @@ const containerVariants = {
 };
 
 const pVariants = {
-   hidden: { opacity: 0, y: 50 },
+   hidden: { y: '100%' },
    visible: {
-      opacity: 1,
       y: 0,
       transition: { duration: 0.4, ease: 'easeOut' }, // Плавный выход
    },
 };
 
 const h2Variants = {
-   hidden: { opacity: 0, y: 50, x: -64 }, // Стартовое состояние (скрыт, внизу)
+   hidden: { y: '100%', x: -64 }, // Стартовое состояние (скрыт, внизу)
    visible: {
-      opacity: 1,
       y: 0,
       x: -64,
       transition: { duration: 0.5, ease: 'easeOut' }, // Плавное появление

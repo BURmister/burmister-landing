@@ -10,6 +10,10 @@
       @media (max-width: 1919px) {
          font-size: 74px
       }
+
+      @media (max-width: 1399px) {
+         font-size: 68px;
+      }
    }
 
    &-64 {
@@ -19,6 +23,10 @@
       @media (max-width: 1919px) {
          font-size: 52px;
       }
+
+      @media (max-width: 1399px) {
+         font-size: 48px;
+      }
    }
 
    &-44 {
@@ -27,6 +35,10 @@
 
       @media (max-width: 1919px) {
          font-size: 40px;
+      }
+
+      @media (max-width: 1199px) {
+         font-size: 36px;
       }
    }
 }
@@ -56,6 +68,10 @@
       @media (max-width: 1919px) {
          font-size: 28px;
       }
+
+      @media (max-width: 1199px) {
+         font-size: 24px;
+      }
    }
 
    &-28 {
@@ -64,6 +80,10 @@
 
       @media (max-width: 1919px) {
          font-size: 24px;
+      }
+
+      @media (max-width: 1199px) {
+         font-size: 20px;
       }
    }
 
@@ -74,6 +94,10 @@
       @media (max-width: 1919px) {
          font-size: 20px;
       }
+
+      @media (max-width: 1199px) {
+         font-size: 18px;
+      }
    }
 
    &-20 {
@@ -82,6 +106,10 @@
 
       @media (max-width: 1919px) {
          font-size: 18px;
+      }
+
+      @media (max-width: 1199px) {
+         font-size: 16px;
       }
    }
 
