@@ -32,7 +32,7 @@ const Preview = () => {
                <Image className={`rounded-32 ${styles.image}`} src="/mock/preview.png" width={1660} height={640} alt="preview image" />
             </div>
             <div className={`flex ${styles.text}`}>
-               <p className={`text-28 ${styles.quote}`}>Мысль — это корень всего, что существует. Любое достижение начинается с мысли.</p>
+               <p className={`text-28 text-pretty ${styles.quote}`}>Мысль — это корень всего, что существует. Любое достижение начинается с мысли.</p>
                <p className={`text-28 italic whitespace-nowrap ${styles.author}`}>— Айн Рэнд</p>
             </div>
          </div>

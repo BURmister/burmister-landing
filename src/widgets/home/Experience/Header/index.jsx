@@ -12,7 +12,7 @@ const containerVariants = {
    },
 };
 
-const pVariants = {
+const textVariants = {
    hidden: { y: '100%', x: 64 }, // Стартовое состояние (скрыт, внизу)
    visible: {
       y: 0,
@@ -36,7 +36,7 @@ const Header = () => {
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
             <motion.h2
                className={`caption-96 ${styles.title} ${styles.first}`}
-               variants={pVariants}
+               variants={textVariants}
                initial="hidden"
                whileInView={['visible', 'shifted']}
                viewport={{ once: true }}>
@@ -46,7 +46,7 @@ const Header = () => {
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
             <motion.h2
                className={`caption-96 italic ${styles.title} ${styles.second}`}
-               variants={pVariants}
+               variants={textVariants}
                initial="hidden"
                whileInView={['visible', 'shifted']}
                viewport={{ once: true }}>

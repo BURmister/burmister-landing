@@ -5,14 +5,14 @@ import { ButtonBlack } from '@shared/button';
 
 import styles from './styles.module.scss';
 
-const ContactForm = () => {
+const ContactForm = ({ className }) => {
    const onSubmit = (event) => {
       event.preventDefault();
       console.log('submit');
    };
 
    return (
-      <form onSubmit={onSubmit} className={`${styles.form} flex flex-col`}>
+      <form onSubmit={onSubmit} className={`${styles.form} ${className && className} flex flex-col`}>
          <div className={`${styles.row} flex`}>
             <InputGrey type="text" name="NAME" id="name" title="Имя" />
             <InputGrey type="tel" name="PHONE" id="phone" title="Телефон" />

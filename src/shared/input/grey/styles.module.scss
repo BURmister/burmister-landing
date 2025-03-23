@@ -1,8 +1,10 @@
 .input {
    --padding-vertical: 20px;
    --padding-horizontal: 23px;
+   --height: 69px;
+
    padding: 0 var(--padding-horizontal);
-   height: 69px;
+   height: var(--height);
    align-items: center;
 
    &::placeholder {
@@ -13,5 +15,18 @@
       padding: var(--padding-vertical) var(--padding-horizontal);
       height: auto;
       resize: none;
+      min-height: calc(var(--height) * 2);
+   }
+
+   @media (max-width: 991px) {
+      --padding-vertical: 16px;
+      --padding-horizontal: 20px;
+      --height: 56px;
+   }
+
+   @media (max-width: 575px) {
+      --padding-vertical: 12px;
+      --padding-horizontal: 16px;
+      // height: 44px;
    }
 }

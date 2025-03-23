@@ -5,8 +5,8 @@
    z-index: 911;
 
    .wrapper {
-      padding-top: 24px;
-      padding-bottom: 24px;
+      padding-top: var(--small-gap);
+      padding-bottom: var(--small-gap);
       justify-content: space-between;
       align-items: center;
 

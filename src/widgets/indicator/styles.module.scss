@@ -2,7 +2,7 @@
    --width: 6px;
 
    top: 25dvh;
-   right: 24px;
+   right: var(--small-gap);
    height: 50dvh;
    width: var(--width);
 
@@ -12,5 +12,9 @@
       .indicator {
          width: var(--width);
       }
+   }
+
+   @media (max-width: 991px) {
+      right: calc(var(--wrapper-horizontal-padding) * 0.5 - var(--width) * 0.5);
    }
 }

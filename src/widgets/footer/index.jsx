@@ -43,8 +43,8 @@ const Footer = () => {
          </div>
          <div className={`content-wrapper ${styles.wrapper} ${styles.bottom} flex flex-col`}>
             <div className={`${styles.copyrightWrapper} flex`}>
-               <p className={`text-24`}>© c 2004 года</p>
-               <p className={`text-24`}>construit per burmister avec amour ❤️</p>
+               <p className={`text-24nn whitespace-nowrap`}>© c 2004 года</p>
+               <p className={`text-24nn whitespace-nowrap`}>construit per burmister avec amour ❤️</p>
             </div>
             <div className={`${styles.whosWrapper}`}>
                <p className={`text-20`}>Кто такой burmister? Человек, который берет на себя ответственность за создание невозможного</p>

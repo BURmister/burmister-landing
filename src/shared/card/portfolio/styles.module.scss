@@ -17,4 +17,24 @@
    @media (max-width: 1919px) {
       --image-height: 304px;
    }
+
+   @media (max-width: 1199px) {
+      --image-height: 280px;
+   }
+
+   @media (max-width: 991px) {
+      --image-height: 364px;
+   }
+
+   @media (max-width: 767px) {
+      --image-height: 280px;
+   }
+
+   @media (max-width: 575px) {
+      --image-height: 220px;
+   }
+
+   @media (max-width: 389px) {
+      --image-height: 202px;
+   }
 }

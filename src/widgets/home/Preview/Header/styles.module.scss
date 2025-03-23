@@ -4,6 +4,15 @@
 
    .titleWrapper {
       grid-column-start: 4;
-      grid-column-end: 9;
+      grid-column-end: 10;
+   }
+
+   @media (max-width: 1199px) {
+      display: flex;
+   }
+
+   @media (max-width: 767px) {
+      flex: 1;
+      justify-content: flex-end;
    }
 }

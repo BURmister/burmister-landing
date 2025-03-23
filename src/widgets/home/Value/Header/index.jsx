@@ -12,21 +12,12 @@ const containerVariants = {
    },
 };
 
-const pVariants = {
-   hidden: { y: '100%' },
+const textVariants = {
+   hidden: { y: '110%', rotateZ: '23deg', originX: 0 }, // Стартовое состояние (скрыт, внизу)
    visible: {
       y: 0,
-      rotate: 0,
-      transition: { duration: 0.6, ease: 'easeIn' }, // Плавный выход
-   },
-};
-
-const h2Variants = {
-   hidden: { y: '100%' },
-   visible: {
-      y: 0,
-      rotate: 0,
-      transition: { duration: 0.4, ease: 'easeIn' }, // Плавное появление
+      rotateZ: 0,
+      transition: { duration: 0.64, ease: 'easeInOut' }, // Плавное появление
    },
 };
 
@@ -42,9 +33,9 @@ const HeaderBlock = () => {
          <motion.div className="overflow-hidden">
             <motion.h2
                className={`caption-96 ${styles.title}`}
-               variants={h2Variants}
-               initial="hidden"
-               whileInView={['visible', 'shifted']}
+               variants={textVariants}
+               initial={textVariants.hidden}
+               whileInView={textVariants.visible}
                viewport={{ once: true }}>
                Идеи реализуются действиями
             </motion.h2>
@@ -54,9 +45,9 @@ const HeaderBlock = () => {
          <motion.div className="overflow-hidden">
             <motion.p
                className={`text-24 ${styles.title}`}
-               variants={pVariants}
-               initial={pVariants.hidden}
-               whileInView={pVariants.visible}
+               variants={textVariants}
+               initial={textVariants.hidden}
+               whileInView={textVariants.visible}
                viewport={{ once: true }}>
                Что получит ваш бизнес?
             </motion.p>

@@ -1,0 +1,14 @@
+.Logo {
+   @media (max-width: 767px) {
+      width: 124px;
+      height: auto;
+   }
+
+   @media (max-width: 575px) {
+      width: 108px;
+   }
+
+   @media (max-width: 389px) {
+      width: 82px;
+   }
+}

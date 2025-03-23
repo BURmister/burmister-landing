@@ -11,7 +11,7 @@ const List = ({ data }) => {
          <div className={`${styles.list}`}>
             {data?.map((item, index) => (
                <Fragment key={index}>
-                  <PortfolioCard data={item} />
+                  <PortfolioCard data={item} index={index} />
                </Fragment>
             ))}
          </div>
