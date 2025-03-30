@@ -48,7 +48,8 @@ const Header = () => {
                initial="hidden"
                whileInView={['visible', 'shifted']}
                viewport={{ once: true }}>
-               Рамки исчезают с началом
+               {/* Рамки исчезают с началом */}
+               За пределами
             </motion.h2>
          </motion.div>
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
@@ -58,7 +59,8 @@ const Header = () => {
                initial={pVariants.hidden}
                whileInView={pVariants.visible}
                viewport={{ once: true }}>
-               настоящего мышления
+               {/* настоящего мышления */}
+               видимого
             </motion.h2>
          </motion.div>
       </motion.div>

@@ -1,0 +1,17 @@
+.text {
+   &.hidden {
+      color: transparent;
+
+      &::selection {
+         color: var(--black);
+         background-color: transparent;
+      }
+   }
+
+   &.visible {
+      &::selection {
+         color: var(--white);
+         // color: transparent;
+      }
+   }
+}

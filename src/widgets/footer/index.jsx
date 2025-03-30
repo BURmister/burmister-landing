@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import { ContactForm } from '@shared/form';
 
+import Copyright from './copyright';
+import Whos from './whos';
+
 import styles from './styles.module.scss';
 
 const Footer = () => {
    return (
       <footer className={`${styles.footer} flex flex-col`}>
-         <div className={`content-wrapper ${styles.wrapper} ${styles.top} flex `}>
+         <div className={`content-wrapper ${styles.top} flex `}>
             <div className={`${styles.contacts} flex`}>
                <div className={`${styles.logo} flex flex-col`}>
                   <h3 className={`text-32 whitespace-nowrap`}>Олег Бурмистров</h3>
@@ -41,14 +44,9 @@ const Footer = () => {
             </div>
             <ContactForm className={`${styles.form} flex`} />
          </div>
-         <div className={`content-wrapper ${styles.wrapper} ${styles.bottom} flex flex-col`}>
-            <div className={`${styles.copyrightWrapper} flex`}>
-               <p className={`text-24nn whitespace-nowrap`}>© c 2004 года</p>
-               <p className={`text-24nn whitespace-nowrap`}>construit per burmister avec amour ❤️</p>
-            </div>
-            <div className={`${styles.whosWrapper}`}>
-               <p className={`text-20`}>Кто такой burmister? Человек, который берет на себя ответственность за создание невозможного</p>
-            </div>
+         <div className={`content-wrapper ${styles.bottom} flex flex-col`}>
+            <Copyright />
+            <Whos />
          </div>
       </footer>
    );

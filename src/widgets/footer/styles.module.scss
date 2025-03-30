@@ -61,13 +61,5 @@
 
    .bottom {
       gap: var(--small-gap);
-
-      .copyrightWrapper {
-         justify-content: space-between;
-         align-items: center;
-         flex-wrap: wrap;
-         column-gap: var(--small-gap);
-         // row-gap: calc(var(--small-gap) * 0.5);
-      }
    }
 }
