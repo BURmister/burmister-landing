@@ -16,7 +16,8 @@ const Header = () => {
       <motion.div className={`content-wrapper ${styles.header} flex flex-col`} initial="hidden" whileInView="visible" viewport={{ once: true }}>
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
             <motion.h2 className={`caption-44 ${styles.title}`} variants={pVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-               Создаю решения, которые двигают ваш бизнес вперёд
+               Создаю решения, которые
+               <br /> двигают ваш бизнес вперёд
             </motion.h2>
          </motion.div>
       </motion.div>

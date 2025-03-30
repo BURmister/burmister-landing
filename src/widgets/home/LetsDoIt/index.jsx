@@ -32,7 +32,7 @@ const LetsDoIt = () => {
             viewport={{ once: true }}>
             <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
                <motion.p className={`text-32 text-center`} variants={textVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                  Ваши идеи готовы выйти за рамки?
+                  Ваши идеи готовы к воплощению?
                </motion.p>
             </motion.div>
             <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
