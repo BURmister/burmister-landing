@@ -2,4 +2,8 @@
    padding-top: var(--section-padding-top);
    padding-bottom: var(--section-padding-bottom, 24px);
    gap: var(--section-gap);
+
+   @media (max-width: 767px) {
+      gap: calc(var(--section-gap) * 0.5);
+   }
 }

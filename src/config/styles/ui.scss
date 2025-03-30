@@ -78,12 +78,8 @@ button {
    &-16 {
       border-radius: 16px;
 
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
          border-radius: 12px;
-      }
-
-      @media (max-width: 575px) {
-         border-radius: 8px;
       }
    }
 }

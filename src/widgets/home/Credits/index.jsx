@@ -10,44 +10,23 @@ import styles from './styles.module.scss';
 const Credits = () => {
    const sectionRef = useRef(null);
 
-   useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);
-      const section = sectionRef.current;
-      if (!section) return;
+   // useEffect(() => {
+   //    gsap.registerPlugin(ScrollTrigger);
+   //    const section = sectionRef.current;
+   //    if (!section) return;
 
-      ScrollTrigger.create({
-         trigger: section,
-         start: 'top 80%',
-         end: 'bottom top',
-         scrub: true,
-         snap: {
-            snapTo: 1,
-            duration: 16,
-            delay: 1,
-         },
-      });
-
-      // ScrollTrigger.create({
-      //    trigger: section,
-      //    start: 'top 80%',
-      //    end: 'bottom 20%',
-      //    scrub: true,
-      //    snap: {
-      //       snapTo: (progress) => (progress > 0.5 ? 1 : 0), // Если прокрутили больше половины → докручиваем
-      //       duration: (progress, direction) => calculateDuration(direction),
-      //       delay: 0.3, // Задержка перед авто-скроллом
-      //    },
-      // });
-
-      // function calculateDuration(direction) {
-      //    const rect = section.getBoundingClientRect();
-      //    const distance =
-      //       direction > 0
-      //          ? window.innerHeight - rect.top // До конца блока
-      //          : -rect.top; // До начала блока
-      //    return Math.abs(distance / window.innerHeight) * 0.5; // Авто-длительность
-      // }
-   }, []);
+   //    ScrollTrigger.create({
+   //       trigger: section,
+   //       start: 'top 80%',
+   //       end: 'bottom top',
+   //       scrub: true,
+   //       snap: {
+   //          snapTo: 1,
+   //          duration: 16,
+   //          delay: 1,
+   //       },
+   //    });
+   // }, []);
 
    return (
       <Section ref={sectionRef} className={`relative ${styles.section}`}>

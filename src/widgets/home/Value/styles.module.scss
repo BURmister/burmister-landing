@@ -13,7 +13,7 @@
 
             @media (max-width: 991px) {
                height: 460px;
-               max-height: 50dvh;
+               max-height: 50svh;
                object-position: center 30%;
             }
 
@@ -34,7 +34,7 @@
             position: sticky;
             top: var(--small-gap);
             margin-left: var(--block-gap);
-            max-height: calc(100dvh - var(--small-gap) * 2);
+            max-height: calc(100svh - var(--small-gap) * 2);
          }
 
          @media (min-width: 1200px) {

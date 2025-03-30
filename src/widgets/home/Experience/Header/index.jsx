@@ -40,7 +40,7 @@ const Header = () => {
                initial="hidden"
                whileInView={['visible', 'shifted']}
                viewport={{ once: true }}>
-               Материальное —
+               От идей
             </motion.h2>
          </motion.div>
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
@@ -50,7 +50,7 @@ const Header = () => {
                initial="hidden"
                whileInView={['visible', 'shifted']}
                viewport={{ once: true }}>
-               результат созидания
+               к достижениям
             </motion.h2>
          </motion.div>
       </motion.div>

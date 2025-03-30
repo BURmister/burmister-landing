@@ -35,7 +35,7 @@ const Header = () => {
          viewport={{ once: true }}>
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
             <motion.h2
-               className={`caption-96 ${styles.title} ${styles.first}`}
+               className={`caption-96 ${styles.title} ${styles.first} text-pretty`}
                variants={pVariants}
                initial="hidden"
                whileInView={['visible', 'shifted']}
@@ -45,7 +45,7 @@ const Header = () => {
          </motion.div>
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
             <motion.h2
-               className={`caption-96 italic ${styles.title} ${styles.second}`}
+               className={`caption-96 italic ${styles.title} ${styles.second} text-pretty`}
                variants={pVariants}
                initial="hidden"
                whileInView={['visible', 'shifted']}

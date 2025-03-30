@@ -1,7 +1,7 @@
 .section {
    --section-padding-top: 24px;
    --section-gap: 0;
-   height: 100dvh;
+   height: 100svh;
 
    @media (max-width: 1919px) {
       --section-padding-top: 26px;
@@ -14,8 +14,8 @@
 
 .content {
    flex: 1;
-   padding-top: min(6dvh, var(--block-gap));
-   padding-bottom: min(6dvh, var(--block-gap));
+   padding-top: min(6svh, var(--block-gap));
+   padding-bottom: min(6svh, var(--block-gap));
    min-height: 0;
    gap: var(--small-gap);
 
@@ -48,6 +48,10 @@
       .author {
          margin-left: auto;
       }
+
+      @media (max-width: 767px) {
+         flex-direction: column;
+      }
    }
 
    @media (min-width: 768px) {
@@ -65,4 +69,16 @@
 
 .footer {
    gap: 8px;
+
+   .icon {
+      @media (max-width: 767px) {
+         width: 28px;
+         height: auto;
+      }
+
+      @media (max-width: 575px) {
+         width: 24px;
+         height: auto;
+      }
+   }
 }

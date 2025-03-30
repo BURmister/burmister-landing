@@ -2,20 +2,22 @@
    --move: 3;
    --columns: 12;
 
-   .titleWrapper {
-      display: grid;
-      grid-template-columns: repeat(var(--columns), 1fr);
+   @media (min-width: 768px) {
+      .titleWrapper {
+         display: grid;
+         grid-template-columns: repeat(var(--columns), 1fr);
 
-      .title {
-         grid-column-end: var(--columns);
-      }
+         .title {
+            grid-column-end: var(--columns);
+         }
 
-      .first {
-         grid-column-start: var(--move);
-      }
+         .first {
+            grid-column-start: var(--move);
+         }
 
-      .second {
-         grid-column-start: calc(var(--move) - 1);
+         .second {
+            grid-column-start: calc(var(--move) - 1);
+         }
       }
    }
 }
