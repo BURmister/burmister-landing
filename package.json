@@ -12,6 +12,7 @@
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
     "html-react-parser": "5.2.2",
+    "lenis": "^1.2.3",
     "next": "15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
