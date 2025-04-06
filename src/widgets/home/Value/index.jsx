@@ -9,24 +9,27 @@ const Value = () => {
          <div className={`relative content-wrapper ${styles.content} flex`}>
             <div className={`flex flex-col ${styles.textWrapper}`}>
                <div className={`flex flex-col ${styles.text}`}>
-                  <h3 className={`caption-64`}>Стратегическое видение</h3>
-                  <p className={`text-24 text-pretty`}>Помогаю проекту не просто решать текущие задачи, а строить долгосрочную стратегию развития</p>
-               </div>
-               <div className={`flex flex-col ${styles.text}`}>
-                  <h3 className={`caption-64`}>Креатив и нестандартные решения</h3>
-                  <p className={`text-24 text-pretty`}>Нахожу неожиданные, но рабочие пути реализации идей, когда стандартные методы не работают</p>
-               </div>
-               <div className={`flex flex-col ${styles.text}`}>
-                  <h3 className={`caption-64`}>Эффективность команды</h3>
+                  <h3 className={`caption-64 text-pretty`}>Стратегическое видение</h3>
                   <p className={`text-24 text-pretty`}>
-                     Выстраиваю процессы так, чтобы команда работала слаженно, а проект двигался быстрее и без хаоса
+                     Не просто решаю задачи — вижу направление роста и&nbsp;помогаю&nbsp;выстроить&nbsp;путь к&nbsp;долгосрочным результатам
                   </p>
                </div>
                <div className={`flex flex-col ${styles.text}`}>
-                  <h3 className={`caption-64`}>Переговоры и партнерства</h3>
+                  <h3 className={`caption-64 text-pretty`}>Нестандартные решения</h3>
                   <p className={`text-24 text-pretty`}>
-                     Умею находить общий язык с клиентами, инвесторами и партнерами, превращая идеи в реальные сделки
+                     Нахожу неожиданные, но рабочие пути реализации идей, когда&nbsp;стандартные методы не&nbsp;работают
                   </p>
+               </div>
+               <div className={`flex flex-col ${styles.text}`}>
+                  <h3 className={`caption-64 text-pretty`}>Команда не&nbsp;буксует</h3>
+                  <p className={`text-24 text-pretty`}>
+                     Настраиваю ритм, синхронизацию и ясность. <br />
+                     Проекты&nbsp;двигаются, а&nbsp;не&nbsp;замирают
+                  </p>
+               </div>
+               <div className={`flex flex-col ${styles.text}`}>
+                  <h3 className={`caption-64 text-pretty`}>Умею договариваться</h3>
+                  <p className={`text-24 text-pretty`}>С любым стейкхолдером. Чтобы идеи становились делом — а&nbsp;дело&nbsp;приносило результат</p>
                </div>
             </div>
             <div className={`${styles.mediaWrapper}`}>

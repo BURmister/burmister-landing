@@ -38,6 +38,10 @@
       .textWrapper {
          gap: var(--block-gap);
 
+         .text {
+            gap: var(--normal-gap);
+         }
+
          @media (min-width: 992px) {
             padding-top: calc(var(--block-gap) * 0.5);
          }

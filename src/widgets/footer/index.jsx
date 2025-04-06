@@ -20,7 +20,7 @@ const Footer = () => {
                         Github
                      </Link>
                      <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        Codepen
+                        Telegram
                      </Link>
                      <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                         Linkedin
@@ -30,7 +30,7 @@ const Footer = () => {
                      </Link>
                   </div>
                   <div className={`${styles.sublist} flex flex-col`}>
-                     <p className={`text-20`}>по любым вопросам</p>
+                     <p className={`text-20`}>по вопросам сотрудничества</p>
                      <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                         burmister@qretex.com
                      </Link>
