@@ -16,7 +16,7 @@ const pVariants = {
    hidden: { y: '100%' },
    visible: {
       y: 0,
-      transition: { duration: 0.4, ease: 'easeOut' },
+      transition: { duration: 0.4, ease: 'easeOut', delay: 0.1 },
    },
 };
 
@@ -25,11 +25,11 @@ const h2Variants = {
    visible: {
       y: 0,
       x: -64,
-      transition: { duration: 0.5, ease: 'easeOut' },
+      transition: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
    },
    shifted: {
       x: 0,
-      transition: { duration: 0.6, ease: 'easeInOut', delay: 0.5 },
+      transition: { duration: 0.6, ease: 'easeInOut', delay: 0.6 },
    },
 };
 

@@ -6,14 +6,14 @@
       .background {
          top: var(--section-gap);
          // margin-bottom: var(--section-gap);
-         height: calc(100svh - var(--section-gap) * 2);
+         height: calc(100lvh - var(--section-gap) * 2);
          z-index: 1;
       }
 
       .content {
          padding-top: var(--section-gap);
-         padding-bottom: calc(100svh - var(--section-gap));
-         gap: 30svh;
+         padding-bottom: calc(100lvh - var(--section-gap));
+         gap: 30lvh;
          z-index: 2;
 
          .sublist {
