@@ -1,59 +1,37 @@
 'use client';
+import { useEffect, useRef } from 'react';
+import { createAnimation, gsapFromto, gsapFrom } from '@hooks/gsap';
 
-import { motion } from 'framer-motion';
 import styles from './styles.module.scss';
 
-const containerVariants = {
-   hidden: {},
-   visible: {
-      transition: {
-         staggerChildren: 0.2, // p появляется через 0.1s после h2
-      },
-   },
-};
-
-const textVariants = {
-   hidden: { y: '100%', x: 64 }, // Стартовое состояние (скрыт, внизу)
-   visible: {
-      y: 0,
-      x: 64,
-      transition: { duration: 0.5, ease: 'easeOut' }, // Плавное появление
-   },
-   shifted: {
-      x: 0, // Смещение вправо
-      transition: { duration: 0.6, ease: 'easeInOut', delay: 0.5 }, // Ждём 1s перед сдвигом
-   },
-};
-
 const Header = () => {
+   const first = useRef(null);
+   const second = useRef(null);
+
+   useEffect(() => {
+      createAnimation(() => {
+         const _first = first.current;
+         const _second = second.current;
+         if (!_first || !_second) return;
+
+         gsapFromto({ target: _first, options: { set: { x: 64 }, from: { yPercent: 100 }, to: { x: 0 } } });
+         gsapFrom({ target: _second, options: { from: { yPercent: 100, delay: 0.05 } } });
+      });
+   }, []);
+
    return (
-      <motion.div
-         className={`content-wrapper ${styles.header} flex flex-col`}
-         variants={containerVariants}
-         initial="hidden"
-         whileInView="visible"
-         viewport={{ once: true }}>
-         <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
-            <motion.h2
-               className={`caption-96 ${styles.title} ${styles.first}`}
-               variants={textVariants}
-               initial="hidden"
-               whileInView={['visible', 'shifted']}
-               viewport={{ once: true }}>
+      <div className={`content-wrapper ${styles.header} flex flex-col`}>
+         <div className={`${styles.titleWrapper} overflow-hidden`}>
+            <h2 ref={first} className={`caption-96 ${styles.title} ${styles.first}`}>
                От смелых идей
-            </motion.h2>
-         </motion.div>
-         <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
-            <motion.h2
-               className={`caption-96 italic ${styles.title} ${styles.second}`}
-               variants={textVariants}
-               initial="hidden"
-               whileInView={['visible', 'shifted']}
-               viewport={{ once: true }}>
+            </h2>
+         </div>
+         <div className={`${styles.titleWrapper} overflow-hidden`}>
+            <h2 ref={second} className={`caption-96 italic ${styles.title} ${styles.second}`}>
                к достижениям
-            </motion.h2>
-         </motion.div>
-      </motion.div>
+            </h2>
+         </div>
+      </div>
    );
 };
 

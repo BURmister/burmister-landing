@@ -2,6 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
+      "@hooks/*": ["./src/hooks/*"],
       "@config/*": ["./src/config/*"],
       "@shared/*": ["./src/shared/*"],
       "@widgets/*": ["./src/widgets/*"]
