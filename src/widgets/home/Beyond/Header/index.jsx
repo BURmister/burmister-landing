@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import { createAnimation, gsapFromto, gsapFrom } from '@hooks/gsap';
+import { createAnimation, gsapFromto, gsapFrom, rotateAnimation } from '@hooks/gsap';
 
 import styles from './styles.module.scss';
 
@@ -14,8 +14,13 @@ const Header = () => {
          const _second = second.current;
          if (!_first || !_second) return;
 
-         gsapFromto({ target: _first, options: { set: { x: -64 }, from: { yPercent: 100 }, to: { x: 0 } } });
-         gsapFrom({ target: _second, options: { from: { yPercent: 100, delay: 0.05 } } });
+         if (window?.innerWidth >= 992) {
+            gsapFromto({ target: _first, options: { set: { x: -64 }, from: { yPercent: 100 }, to: { x: 0 } } });
+            gsapFrom({ target: _second, options: { from: { yPercent: 100, delay: 0.05 } } });
+         } else {
+            rotateAnimation({ target: _first });
+            rotateAnimation({ target: _second, options: { from: { delay: 0.05 } } });
+         }
       });
    }, []);
 

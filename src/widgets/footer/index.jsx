@@ -32,14 +32,14 @@ const Footer = () => {
                   <div className={`${styles.sublist} flex flex-col`}>
                      <p className={`text-20`}>по вопросам сотрудничества</p>
                      <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        burmister@qretex.com
+                        hello@burmister.ru
                      </Link>
                   </div>
-                  <div className={`${styles.sublist} flex flex-col`}>
+                  {/* <div className={`${styles.sublist} flex flex-col`}>
                      <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                         Qretex
                      </Link>
-                  </div>
+                  </div> */}
                </div>
             </div>
             <ContactForm className={`${styles.form} flex`} />

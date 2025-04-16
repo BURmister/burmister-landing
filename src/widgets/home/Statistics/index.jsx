@@ -16,8 +16,11 @@ const Statistics = () => {
                <p className={`caption-64 text-pretty`}>
                   <span className={`text-blue`}>20+</span> успешных проектов в разных индустриях
                </p>
-               <p className={`caption-64 text-pretty`}>
+               {/* <p className={`caption-64 text-pretty`}>
                   <span className={`text-blue`}>Сооснователь</span> и&nbsp;<span className={`text-blue`}>CEO</span> студии&nbsp;Qretex
+               </p> */}
+               <p className={`caption-64 text-pretty`}>
+                  <span className={`text-blue`}>Руководитель</span> отдела в ББ
                </p>
                <p className={`text-32 text-pretty`}>
                   Сильные проекты — это не просто задачи

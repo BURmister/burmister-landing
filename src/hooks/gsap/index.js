@@ -20,7 +20,8 @@ export const createAnimation = (callback) => {
    if (!callback) return;
    scrollAnimationProvider();
 
-   if (window?.innerWidth >= 992) callback();
+   callback();
+   // if (window?.innerWidth >= 992)
    // else rotateAnimation();
 };
 
@@ -54,5 +55,5 @@ export const gsapFrom = ({ target, trigger, options }) => {
 };
 
 export const rotateAnimation = ({ target, trigger, options }) => {
-   gsapFrom({ target, trigger, options: { ...options, from: { rotateZ: 23, yPercent: 100, transformOrigin: '0% 50%', ...options.from } } });
+   gsapFrom({ target, trigger, options: { ...options, from: { rotateZ: 23, yPercent: 100, transformOrigin: '0% 50%', ...options?.from } } });
 };

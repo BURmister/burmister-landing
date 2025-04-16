@@ -35,11 +35,11 @@ const Credits = () => {
             <div className={`${styles.content} flex flex-col`}>
                <div className={`${styles.sublist} flex flex-col`}>
                   <p className={`caption-64 text-center`}>Лидер команды</p>
-                  <p className={`caption-64 text-center`}>Руководитель отдела в ББ</p>
                   {/* <p className={`caption-64 text-center`}>Предприниматель</p> */}
                   {/* <p className={`caption-64 text-center`}>Проектный стратег</p> */}
                   <p className={`caption-64 text-center`}>Проектный менеджер</p>
-                  <p className={`caption-64 text-center`}>Основатель Qretex</p>
+                  <p className={`caption-64 text-center`}>Руководитель отдела в ББ</p>
+                  {/* <p className={`caption-64 text-center`}>Основатель Qretex</p> */}
                </div>
                <p className={`caption-64 text-center`}>
                   <span className={`caption-44 text-blue`}>моя цель</span>
