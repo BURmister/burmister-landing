@@ -1,1 +1,1 @@
-export { InputGrey, TextareaGrey } from './grey';
+export { InputGrey, TextareaGrey, InputGreyPhone } from './grey';

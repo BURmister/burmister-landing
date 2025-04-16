@@ -15,12 +15,15 @@ const Header = () => {
    return (
       <motion.div className={`content-wrapper ${styles.header} flex flex-col`} initial="hidden" whileInView="visible" viewport={{ once: true }}>
          <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
-            <motion.h2 className={`caption-44 ${styles.title}`} variants={pVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.h2
+               className={`caption-40 text-pretty ${styles.title}`}
+               variants={pVariants}
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true }}>
                {/* Создаю решения, которые
                <br /> двигают ваш бизнес вперёд */}
-               Соединяю творчество, <br />
-               технологии и бизнес-цели <br />
-               для роста брендов
+               Соединяю творчество, технологии и{'\u00A0'}бизнес-цели для{'\u00A0'}роста брендов
             </motion.h2>
          </motion.div>
       </motion.div>

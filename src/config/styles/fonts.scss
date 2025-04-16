@@ -109,6 +109,35 @@
       //    font-size: 18px;
       // }
    }
+
+   &-40 {
+      font-size: 40px;
+      line-height: 120%;
+
+      @media (max-width: 1919px) {
+         font-size: 36px;
+      }
+
+      @media (max-width: 1199px) {
+         font-size: 32px;
+      }
+
+      @media (max-width: 991px) {
+         font-size: 28px;
+      }
+
+      @media (max-width: 767px) {
+         font-size: 24px;
+      }
+
+      @media (max-width: 575px) {
+         font-size: 20px;
+      }
+
+      // @media (max-width: 479px) {
+      //    font-size: 18px;
+      // }
+   }
 }
 
 .text {

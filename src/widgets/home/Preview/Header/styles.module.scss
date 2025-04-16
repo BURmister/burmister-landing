@@ -4,7 +4,15 @@
 
    .titleWrapper {
       grid-column-start: 4;
-      grid-column-end: 10;
+      grid-column-end: 8;
+
+      @media (max-width: 1919px) {
+         grid-column-end: 9;
+      }
+   }
+
+   @media (min-width: 1199px) {
+      margin-top: 2px;
    }
 
    @media (max-width: 1199px) {
