@@ -8,7 +8,8 @@
    align-items: center;
 
    &::placeholder {
-      color: inherit;
+      // color: inherit;
+      color: var(--grey-2);
    }
 
    &.textarea {
