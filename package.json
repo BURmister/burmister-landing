@@ -16,7 +16,8 @@
     "next": "15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-use": "^17.6.0"
+    "react-use": "^17.6.0",
+    "split-type": "^0.3.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -54,6 +54,10 @@ export const gsapFrom = ({ target, trigger, options }) => {
    });
 };
 
+export const fadeAnimation = ({ target, trigger, options }) => {
+   gsapFrom({ target, trigger, options: { ...options, from: { opacity: 0, y: 24, ...options?.from } } });
+};
+
 export const rotateAnimation = ({ target, trigger, options }) => {
    gsapFrom({ target, trigger, options: { ...options, from: { rotateZ: 23, yPercent: 100, transformOrigin: '0% 50%', ...options?.from } } });
 };

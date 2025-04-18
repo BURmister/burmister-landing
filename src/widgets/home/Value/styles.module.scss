@@ -42,19 +42,6 @@
          }
       }
 
-      .textWrapper {
-         gap: var(--block-gap);
-
-         .text {
-            gap: calc(var(--small-gap) * 0.5);
-         }
-
-         @media (min-width: 992px) {
-            padding-top: calc(var(--block-gap) * 0.5);
-            padding-bottom: calc(var(--block-gap) * 0.5);
-         }
-      }
-
       @media (max-width: 991px) {
          display: flex;
          flex-direction: column-reverse;
