@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Section from '@widgets/home/Section';
+import { Text } from '@/src/shared/text';
 
 import Header from './Header';
 import styles from './styles.module.scss';
@@ -31,10 +32,12 @@ const Preview = () => {
             <div className={`${styles.imageWrapper}`}>
                <Image className={`rounded-32 ${styles.image}`} src="/mock/preview.png" width={1660} height={640} alt="preview image" />
             </div>
-            <div className={`flex ${styles.text}`}>
-               <p className={`text-28 text-pretty ${styles.quote}`}>Мысль — это корень всего, что существует. Любое достижение начинается с мысли.</p>
-               <p className={`text-28 italic whitespace-nowrap ${styles.author}`}>— Айн Рэнд</p>
-            </div>
+            {/* <div className={`flex ${styles.text}`}>
+               <Text className={`text-28 text-pretty ${styles.quote}`}>
+                  Мысль — это корень всего, что существует. Любое достижение начинается с мысли.
+               </Text>
+               <Text className={`text-28 italic whitespace-nowrap ${styles.author}`}>— Айн Рэнд</Text>
+            </div> */}
          </div>
       </Section>
    );

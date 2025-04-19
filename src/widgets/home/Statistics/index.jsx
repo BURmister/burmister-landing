@@ -22,7 +22,7 @@ const Statistics = () => {
          <div className={`content-wrapper ${styles.content} flex`}>
             <div className={`flex flex-col ${styles.textWrapper}`}>
                <List data={data.List} />
-               <TextFade className={`caption-32`} data={data.Description} isHtml={true} />
+               <TextFade className={`text-32`} data={data.Description} isHtml={true} />
             </div>
          </div>
       </Section>

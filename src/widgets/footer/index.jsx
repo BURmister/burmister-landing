@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import { ContactForm } from '@shared/form';
 
 import Copyright from './copyright';
 import Whos from './whos';
+import Links from './Links';
 
 import styles from './styles.module.scss';
 
@@ -14,33 +14,7 @@ const Footer = () => {
                <div className={`${styles.logo} flex flex-col`}>
                   <h3 className={`text-32 whitespace-nowrap`}>Олег Бурмистров</h3>
                </div>
-               <div className={`${styles.network} flex flex-col`}>
-                  <div className={`${styles.sublist} flex flex-col`}>
-                     <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        Github
-                     </Link>
-                     <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        Telegram
-                     </Link>
-                     <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        Linkedin
-                     </Link>
-                     <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        Habr
-                     </Link>
-                  </div>
-                  <div className={`${styles.sublist} flex flex-col`}>
-                     <p className={`text-20`}>по вопросам сотрудничества</p>
-                     <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        hello@burmister.ru
-                     </Link>
-                  </div>
-                  {/* <div className={`${styles.sublist} flex flex-col`}>
-                     <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-                        Qretex
-                     </Link>
-                  </div> */}
-               </div>
+               <Links />
             </div>
             <ContactForm className={`${styles.form} flex`} />
          </div>

@@ -43,7 +43,7 @@ export const InputGreyPhone = ({ title, className, value = '', onChange, ...prop
       }
 
       // Удаляем всё, кроме цифр после фиксированной части
-      let numberPart = val.slice(fixedPart.length).replace(/\D/g, '').slice(0, 10);
+      let numberPart = val.slice(fixedPart.length).replace(/\D/g, '').slice(0, 9);
 
       // Форматируем номер
       let formatted = '';

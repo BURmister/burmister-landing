@@ -10,7 +10,9 @@ const TextFade = ({ children, data, className, isHtml }) => {
    useEffect(() => {
       createAnimation(() => {
          const _text = text.current;
-         if (_text) fadeAnimation({ target: _text, options: { from: { y: 64 } } });
+         if (_text) {
+            fadeAnimation({ target: _text, options: { from: { y: 64 } } });
+         }
       });
    }, []);
 

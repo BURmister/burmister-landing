@@ -16,23 +16,6 @@
             }
          }
 
-         .network {
-            gap: calc(var(--block-gap) * 0.5);
-
-            @media (max-width: 767px) {
-               flex-direction: row;
-               flex-wrap: wrap;
-
-               .sublist {
-                  flex: 1;
-
-                  &:last-child {
-                     flex-basis: 100%;
-                  }
-               }
-            }
-         }
-
          @media (min-width: 768px) {
             margin-right: var(--block-gap);
          }
