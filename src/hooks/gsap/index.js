@@ -11,7 +11,7 @@ export const scrollTriggerBounderis = (trigger) => {
    return {
       scrollTrigger: {
          trigger,
-         start: '0% 90%',
+         start: '0% 100%',
       },
    };
 };

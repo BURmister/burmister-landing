@@ -4,7 +4,7 @@ import parse from 'html-react-parser';
 
 import { createAnimation, fadeAnimation } from '@hooks/gsap';
 
-const Text = ({ data }) => {
+const TextFade = ({ children, data, className, isHtml }) => {
    const text = useRef(null);
 
    useEffect(() => {
@@ -15,10 +15,10 @@ const Text = ({ data }) => {
    }, []);
 
    return (
-      <p ref={text} className={`text-32 text-pretty`}>
-         {parse(data)}
+      <p ref={text} className={`text-pretty ${className && className}`}>
+         {data ? (isHtml ? parse(data) : data) : children}
       </p>
    );
 };
 
-export default Text;
+export default TextFade;

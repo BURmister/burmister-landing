@@ -4,6 +4,7 @@ import parse from 'html-react-parser';
 import SplitType from 'split-type';
 
 import { createAnimation, gsapFrom } from '@hooks/gsap';
+import { preprocessHTML } from '@hooks/html';
 import './styles.scss';
 
 const Item = ({ data }) => {
@@ -14,7 +15,7 @@ const Item = ({ data }) => {
       if (!_text) return;
 
       const split = new SplitType(_text, {
-         types: 'lines, words, chars',
+         types: 'lines, words',
          tagName: 'span',
       });
 
@@ -29,7 +30,7 @@ const Item = ({ data }) => {
 
    return (
       <p ref={text} className={`caption-64 text-pretty StatisticTextItem`}>
-         {parse(data)}
+         {parse(preprocessHTML(data))}
       </p>
    );
 };
