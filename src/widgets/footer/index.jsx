@@ -1,5 +1,6 @@
 import { ContactForm } from '@shared/form';
 
+import Logo from './me';
 import Copyright from './copyright';
 import Whos from './whos';
 import Links from './Links';
@@ -11,9 +12,7 @@ const Footer = () => {
       <footer className={`${styles.footer} flex flex-col`}>
          <div className={`content-wrapper ${styles.top} flex `}>
             <div className={`${styles.contacts} flex`}>
-               <div className={`${styles.logo} flex flex-col`}>
-                  <h3 className={`text-32 whitespace-nowrap`}>Олег Бурмистров</h3>
-               </div>
+               <Logo />
                <Links />
             </div>
             <ContactForm className={`${styles.form} flex`} />

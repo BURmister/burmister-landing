@@ -34,7 +34,8 @@ const Header = () => {
       <div className={`content-wrapper ${styles.header} PreviewHeader flex flex-col`}>
          <div className={`${styles.titleWrapper} overflow-hidden`}>
             <h2 ref={text} className={`caption-40 text-pretty ${styles.title}`} style={{ opacity: 0 }}>
-               {parse(preprocessHTML('Соединяю творчество, технологии и&nbsp;бизнес-цели для&nbsp;роста брендов'))}
+               {/* {parse(preprocessHTML('Соединяю творчество, технологии и&nbsp;бизнес-цели для&nbsp;роста брендов'))} */}
+               {parse(preprocessHTML('Помогаю брендам расти и&nbsp;развиваться в&nbsp;интернете'))}
             </h2>
          </div>
       </div>
