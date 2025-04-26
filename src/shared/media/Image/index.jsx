@@ -1,12 +1,11 @@
 import NextImage from 'next/image';
 import styles from './styles.module.scss';
 
-const Video = ({ className, ...props }) => {
+const Image = ({ className, src, ...props }) => {
    return (
       <NextImage
          className={`rounded-24 object-cover ${styles.image} ${className && className}`}
-         width={680}
-         height={420}
+         src={process.env.NEXT_PUBLIC_CMS_URL + src}
          {...props}
          loading="lazy"
          style={{ objectFit: 'cover' }}
@@ -14,4 +13,4 @@ const Video = ({ className, ...props }) => {
    );
 };
 
-export default Video;
+export default Image;

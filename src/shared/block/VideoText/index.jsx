@@ -18,7 +18,7 @@ const VideoText = ({ video, text }) => {
                   {Array.isArray(text) ? (
                      text.map((item, index) => (
                         <Fragment key={index}>
-                           <TextFade className="text-24" data={item} isHtml={true} />
+                           <TextFade className="text-24" data={item?.Text ? item?.Text : item} isHtml={true} />
                         </Fragment>
                      ))
                   ) : (

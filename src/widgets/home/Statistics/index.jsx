@@ -16,13 +16,13 @@ const data = {
    Description: 'Сильные проекты — это не просто задачи<br />Это создание ценности для клиента и бизнеса',
 };
 
-const Statistics = () => {
+const Statistics = ({ data }) => {
    return (
-      <Section className={`${styles.section}`} header={<Header />} legend={'следующий проект может быть вашим'}>
+      <Section className={`${styles.section}`} header={<Header data={data?.Config} />} legend={data?.Config?.Legend}>
          <div className={`content-wrapper ${styles.content} flex`}>
             <div className={`flex flex-col ${styles.textWrapper}`}>
-               <List data={data.List} />
-               <TextFade className={`text-32`} data={data.Description} isHtml={true} />
+               <List data={data?.Text} />
+               <TextFade className={`text-32`} data={data?.Description} isHtml={true} />
             </div>
          </div>
       </Section>

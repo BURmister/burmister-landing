@@ -20,7 +20,7 @@ const textVariants = {
    },
 };
 
-const Header = () => {
+const Header = ({ data }) => {
    return (
       <motion.div
          className={`content-wrapper ${styles.header} flex flex-col`}
@@ -36,7 +36,7 @@ const Header = () => {
                initial={textVariants.hidden}
                whileInView={textVariants.visible}
                viewport={{ once: true }}>
-               Недавние проекты
+               {data?.TitleFirst}
             </motion.h2>
          </motion.div>
 
@@ -48,7 +48,7 @@ const Header = () => {
                initial={textVariants.hidden}
                whileInView={textVariants.visible}
                viewport={{ once: true }}>
-               Работы, созданные со страстью
+               {data?.TitleSecond}
             </motion.p>
          </motion.div>
       </motion.div>

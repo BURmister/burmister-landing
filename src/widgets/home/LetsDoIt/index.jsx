@@ -21,7 +21,7 @@ const textVariants = {
    },
 };
 
-const LetsDoIt = () => {
+const LetsDoIt = ({ data }) => {
    return (
       <Section className={`${styles.section}`}>
          <motion.div
@@ -32,7 +32,7 @@ const LetsDoIt = () => {
             viewport={{ once: true }}>
             <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
                <motion.p className={`text-32 text-center`} variants={textVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                  Ваши идеи готовы к воплощению?
+                  {data?.Text[0]?.Text}
                </motion.p>
             </motion.div>
             <motion.div className={`${styles.titleWrapper} overflow-hidden`}>
@@ -42,7 +42,7 @@ const LetsDoIt = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}>
-                  Сделаем это вместе!
+                  {data?.Text[1]?.Text}
                </motion.p>
             </motion.div>
          </motion.div>

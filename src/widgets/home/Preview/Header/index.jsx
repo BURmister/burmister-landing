@@ -8,7 +8,7 @@ import { preprocessHTML } from '@hooks/html';
 import styles from './styles.module.scss';
 import './styles.scss';
 
-const Header = () => {
+const Header = ({data}) => {
    const text = useRef(null);
 
    useEffect(() => {
@@ -35,7 +35,7 @@ const Header = () => {
          <div className={`${styles.titleWrapper} overflow-hidden`}>
             <h2 ref={text} className={`caption-40 text-pretty ${styles.title}`} style={{ opacity: 0 }}>
                {/* {parse(preprocessHTML('Соединяю творчество, технологии и&nbsp;бизнес-цели для&nbsp;роста брендов'))} */}
-               {parse(preprocessHTML('Помогаю брендам расти и&nbsp;развиваться в&nbsp;интернете'))}
+               {parse(preprocessHTML(data?.TitleFirst))}
             </h2>
          </div>
       </div>

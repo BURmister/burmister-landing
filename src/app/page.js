@@ -1,16 +1,31 @@
+import { Fragment } from 'react';
+import { superFetch } from '@hooks/fetch';
 import { Preview, Beyond, Credits, Experience, Statistics, LetsDoIt, Portfolio, Value } from '@widgets/home';
 
-export default function Home() {
+const componentMap = {
+   Preview,
+   Beyond,
+   Credits,
+   Value,
+   Experience,
+   Portfolio,
+   Statistics,
+   LetsDoIt,
+};
+
+export default async function Home() {
+   const response = await superFetch('glavnaya?populate[Content][populate]=*&populate[Page]=*');
+
    return (
       <div className={`page flex flex-col`}>
-         <Preview />
-         <Beyond />
-         <Credits />
-         <Value />
-         <Experience />
-         <Portfolio />
-         <Statistics />
-         <LetsDoIt />
+         {response?.data?.Content?.map((item, index) => {
+            const Component = componentMap[item?.Config?.Name];
+            return Component ? (
+               <Fragment key={index}>
+                  <Component data={item} />
+               </Fragment>
+            ) : null;
+         })}
       </div>
    );
 }

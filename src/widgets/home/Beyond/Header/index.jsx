@@ -4,7 +4,7 @@ import { createAnimation, gsapFromto, gsapFrom, rotateAnimation } from '@hooks/g
 
 import styles from './styles.module.scss';
 
-const Header = () => {
+const Header = ({ data }) => {
    const first = useRef(null);
    const second = useRef(null);
 
@@ -28,14 +28,12 @@ const Header = () => {
       <div className={`content-wrapper ${styles.header} flex flex-col`}>
          <div className={`${styles.titleWrapper} overflow-hidden`}>
             <h2 className={`caption-96 ${styles.title} ${styles.first} text-pretty`} ref={first}>
-               {/* Рамки исчезают с началом */}
-               Креативное мышление,
+               {data.TitleFirst}
             </h2>
          </div>
          <div className={`${styles.titleWrapper} overflow-hidden`}>
             <h2 className={`caption-96 italic ${styles.title} ${styles.second} text-pretty`} ref={second}>
-               {/* настоящего мышления */}
-               ведущее к результату
+               {data.Second}
             </h2>
          </div>
       </div>

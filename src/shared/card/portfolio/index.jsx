@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { Image } from '@shared/media';
 import styles from './styles.module.scss';
 
 const PortfolioCard = ({ data, index }) => {
@@ -47,10 +47,10 @@ const PortfolioCard = ({ data, index }) => {
 
    return (
       <Link ref={cardRef} className={`${styles.card} flex flex-col will-blue`} href="#">
-         <Image ref={imageRef} className={`rounded-24 ${styles.image}`} src={data.Image} width={790} height={385} alt={data.Name} />
+         <Image ref={imageRef} className={`rounded-24 ${styles.image}`} src={data?.Preview?.url} width={790} height={385} alt={data?.Name} />
          <div className="overflow-hidden">
             <p ref={nameRef} className={`text-32 ${styles.title}`}>
-               {data.Name}
+               {data?.Name}
             </p>
          </div>
       </Link>

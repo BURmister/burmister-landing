@@ -12,7 +12,6 @@ const Item = ({ href, children }) => {
       if (!_text) return;
 
       createAnimation(() => {
-         console.log('link: ', _text);
          gsapFrom({
             target: _text,
             trigger: _text,

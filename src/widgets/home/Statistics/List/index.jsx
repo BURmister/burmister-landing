@@ -9,7 +9,7 @@ const List = ({ data }) => {
             <>
                {data?.map((item, index) => (
                   <Fragment key={index}>
-                     <Item data={item} />
+                     <Item data={item.Text} />
                   </Fragment>
                ))}
             </>

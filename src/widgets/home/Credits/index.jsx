@@ -7,7 +7,7 @@ import { useEffect, useRef } from 'react';
 import Section from '@widgets/home/Section';
 import styles from './styles.module.scss';
 
-const Credits = () => {
+const Credits = ({ data }) => {
    const sectionRef = useRef(null);
 
    // useEffect(() => {
@@ -33,24 +33,32 @@ const Credits = () => {
          <div className={`content-wrapper ${styles.wrapper} flex flex-col`}>
             <div className={`sticky ${styles.background} background-grey rounded-32`}></div>
             <div className={`${styles.content} flex flex-col`}>
-               <div className={`${styles.sublist} flex flex-col`}>
-                  <p className={`caption-64 text-center`}>Лидер команды</p>
-                  {/* <p className={`caption-64 text-center`}>Предприниматель</p> */}
-                  {/* <p className={`caption-64 text-center`}>Проектный стратег</p> */}
-                  <p className={`caption-64 text-center`}>Проектный менеджер</p>
-                  <p className={`caption-64 text-center`}>Руководитель отдела в ББ</p>
-                  {/* <p className={`caption-64 text-center`}>Основатель Qretex</p> */}
-               </div>
-               <p className={`caption-64 text-center`}>
-                  <span className={`caption-44 text-blue`}>моя цель</span>
-                  <br />
-                  Делать лучше, чем возможно
-               </p>
-               <p className={`caption-64 text-center`}>
-                  <span className={`caption-44 text-blue`}>моя миссия</span>
-                  <br />
-                  Воплощать невозможное
-               </p>
+               {data?.Roles?.length && (
+                  <div className={`${styles.sublist} flex flex-col`}>
+                     {data?.Roles?.map((item, index) => (
+                        <p key={index} className={`caption-64 text-center`}>
+                           {item.Text}
+                        </p>
+                     ))}
+                     {/* <p className={`caption-64 text-center`}>Предприниматель</p> */}
+                     {/* <p className={`caption-64 text-center`}>Проектный стратег</p> */}
+                     {/* <p className={`caption-64 text-center`}>Основатель Qretex</p> */}
+                  </div>
+               )}
+               {data?.Goal && (
+                  <p className={`caption-64 text-center`}>
+                     <span className={`caption-44 text-blue`}>{data?.Goal?.Description}</span>
+                     <br />
+                     {data?.Goal?.Title}
+                  </p>
+               )}
+               {data?.Mission && (
+                  <p className={`caption-64 text-center`}>
+                     <span className={`caption-44 text-blue`}>{data?.Mission?.Description}</span>
+                     <br />
+                     {data?.Mission?.Title}
+                  </p>
+               )}
             </div>
          </div>
       </Section>

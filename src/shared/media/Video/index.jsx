@@ -39,7 +39,7 @@ const Video = ({ className, src, type, ...props }) => {
             height={420}
             {...props}
             loading="lazy">
-            <source src={src} type={type} />
+            <source src={process.env.NEXT_PUBLIC_CMS_URL + src} type={type} />
          </video>
       </motion.div>
    );
