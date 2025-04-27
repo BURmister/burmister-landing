@@ -12,6 +12,11 @@ const nextConfig = {
             hostname: 'localhost*',
             pathname: '**',
          },
+         {
+            protocol: 'https',
+            hostname: 'api.burmister.pro',
+            pathname: '**',
+         },
       ],
    },
 };
