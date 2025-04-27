@@ -46,7 +46,8 @@ export const localFetch = async (postfix, params = { method: 'GET' }) => {
    try {
       if (params.body) params.body = JSON.stringify(params.body);
 
-      const response = await fetch(`http://localhost:${process.env.PORT}/api/` + postfix, {
+      // const response = await fetch(`http://localhost:${process.env.PORT}/api/` + postfix, {
+      const response = await fetch(`https://burmister.vercel.app/api/` + postfix, {
          headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${process.env.SERVER_TOKEN}`,
