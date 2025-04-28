@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 
 import { TextFade } from '@shared/text';
-import { ButtonBlack } from '@shared/button';
+import { ActionCallback } from '@shared/action';
 import { Video } from '@shared/media';
 
 import styles from './styles.module.scss';
@@ -26,7 +26,7 @@ const VideoText = ({ video, text }) => {
                   )}
                </div>
             )}
-            <ButtonBlack type="button">на связи</ButtonBlack>
+            <ActionCallback />
          </div>
       </div>
    );

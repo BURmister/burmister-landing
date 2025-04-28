@@ -33,7 +33,7 @@ const Header = ({ data }) => {
          </div>
          <div className={`${styles.titleWrapper} overflow-hidden`}>
             <h2 className={`caption-96 italic ${styles.title} ${styles.second} text-pretty`} ref={second}>
-               {data.Second}
+               {data.TitleSecond}
             </h2>
          </div>
       </div>

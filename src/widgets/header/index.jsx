@@ -1,5 +1,6 @@
 import Logo from '@shared/logo';
-import { ButtonBlack, ButtonGrey } from '@shared/button';
+import { ActionCallback } from '@shared/action';
+// import { ButtonGrey } from '@shared/button';
 
 import styles from './styles.module.scss';
 
@@ -9,8 +10,8 @@ const Header = () => {
          <div className={`content-wrapper ${styles.wrapper} flex `}>
             <Logo />
             <div className={`${styles.actions} flex`}>
-               <ButtonBlack type="button">на связи</ButtonBlack>
-               <ButtonGrey type="button">меню</ButtonGrey>
+               <ActionCallback />
+               {/* <ButtonGrey type="button">меню</ButtonGrey> */}
             </div>
          </div>
       </header>

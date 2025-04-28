@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 const Footer = () => {
    return (
       <footer className={`${styles.footer} flex flex-col`}>
-         <div className={`content-wrapper ${styles.top} flex `}>
+         <div className={`content-wrapper ${styles.top} flex `} id="FormWrapper">
             <div className={`${styles.contacts} flex`}>
                <Logo />
                <Links />
