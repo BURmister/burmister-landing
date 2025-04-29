@@ -32,7 +32,7 @@ const Header = () => {
             </h2>
          </div>
          <div className={`${styles.titleWrapper} overflow-hidden`}>
-            <h2 ref={second} className={`caption-96 italic ${styles.title} ${styles.second}`}>
+            <h2 ref={second} className={`caption-96 italic1 ${styles.title} ${styles.second}`}>
                к достижениям
             </h2>
          </div>

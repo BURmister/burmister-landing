@@ -36,7 +36,7 @@ const Preview = ({ data }) => {
                <Text className={`text-28 text-pretty ${styles.quote}`}>
                   Мысль — это корень всего, что существует. Любое достижение начинается с мысли.
                </Text>
-               <Text className={`text-28 italic whitespace-nowrap ${styles.author}`}>— Айн Рэнд</Text>
+               <Text className={`text-28 italic1 whitespace-nowrap ${styles.author}`}>— Айн Рэнд</Text>
             </div> */}
          </div>
       </Section>

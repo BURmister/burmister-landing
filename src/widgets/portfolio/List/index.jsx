@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 
+import { AnimationRotate2 } from '@shared/animation';
 import { ButtonBlack } from '@shared/button';
 import { PortfolioCard } from '@shared/card';
 
@@ -15,9 +16,9 @@ const List = ({ data }) => {
                </Fragment>
             ))}
          </div>
-         <ButtonBlack className={`${styles.action}`} type="button">
-            другие работы
-         </ButtonBlack>
+         <AnimationRotate2 className={`w-fit ${styles.action}`}>
+            <ButtonBlack type="button">другие работы</ButtonBlack>
+         </AnimationRotate2>
       </div>
    );
 };

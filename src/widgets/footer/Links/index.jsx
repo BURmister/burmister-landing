@@ -1,5 +1,6 @@
 import Link from './Item';
-import { TextFade } from '@/src/shared/text';
+import { Text } from '@shared/text';
+import { AnimationFade } from '@shared/animation';
 import styles from './styles.module.scss';
 
 const Links = () => {
@@ -12,17 +13,19 @@ const Links = () => {
             <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                Telegram
             </Link>
-            <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
+            {/* <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                Linkedin
-            </Link>
-            <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
+            </Link> */}
+            {/* <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                Habr
-            </Link>
+            </Link> */}
          </div>
          <div className={`${styles.sublist} flex flex-col`}>
-            <TextFade className={`text-20`}>по вопросам сотрудничества</TextFade>
+            <AnimationFade>
+               <Text className={`text-20`}>по вопросам сотрудничества</Text>
+            </AnimationFade>
             <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
-               hello@burmister.ru
+               hello@burmister.pro
             </Link>
          </div>
          {/* <div className={`${styles.sublist} flex flex-col`}>

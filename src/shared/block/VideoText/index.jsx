@@ -1,7 +1,8 @@
 import { Fragment } from 'react';
 
-import { TextFade } from '@shared/text';
+import { Text } from '@shared/text';
 import { ActionCallback } from '@shared/action';
+import { AnimationFade, AnimationRotate2 } from '@shared/animation';
 import { Video } from '@shared/media';
 
 import styles from './styles.module.scss';
@@ -18,15 +19,21 @@ const VideoText = ({ video, text }) => {
                   {Array.isArray(text) ? (
                      text.map((item, index) => (
                         <Fragment key={index}>
-                           <TextFade className="text-24" data={item?.Text ? item?.Text : item} isHtml={true} />
+                           <AnimationFade>
+                              <Text className="text-24" data={item?.Text ? item?.Text : item} isHtml={true} />
+                           </AnimationFade>
                         </Fragment>
                      ))
                   ) : (
-                     <TextFade className="text-24" data={text} isHtml={true} />
+                     <AnimationFade>
+                        <Text className="text-24" data={text} isHtml={true} />
+                     </AnimationFade>
                   )}
                </div>
             )}
-            <ActionCallback />
+            <AnimationRotate2>
+               <ActionCallback />
+            </AnimationRotate2>
          </div>
       </div>
    );

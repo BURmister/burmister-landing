@@ -1,9 +1,9 @@
 import qs from 'qs';
-import { superFetch } from '@/src/hooks/fetch';
+import { superFetch } from '@hooks/fetch';
 import Section from '@widgets/home/Section';
+import List from '@widgets/portfolio/List';
 
 import Header from './Header';
-import List from './List';
 import styles from './styles.module.scss';
 
 const Portfolio = async ({ data }) => {
@@ -18,7 +18,7 @@ const Portfolio = async ({ data }) => {
          },
       },
       {
-         encodeValuesOnly: true, // важная штука, чтобы не было лишнего уродства в URL
+         encodeValuesOnly: true,
       },
    );
    const response = await superFetch(`portfolios?populate=*&${queryParams}`);
