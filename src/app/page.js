@@ -13,6 +13,8 @@ const componentMap = {
    LetsDoIt,
 };
 
+export const revalidate = 600;
+
 export default async function Home() {
    const response = await superFetch('glavnaya?populate[Content][populate]=*&populate[Page]=*');
 
