@@ -1,0 +1,15 @@
+.footer {
+   gap: 8px;
+
+   .icon {
+      @media (max-width: 767px) {
+         width: 28px;
+         height: auto;
+      }
+
+      @media (max-width: 575px) {
+         width: 24px;
+         height: auto;
+      }
+   }
+}
