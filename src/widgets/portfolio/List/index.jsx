@@ -16,9 +16,9 @@ const List = ({ data }) => {
                </Fragment>
             ))}
          </div>
-         <AnimationRotate2 className={`w-fit ${styles.action}`}>
+         {/* <AnimationRotate2 className={`w-fit ${styles.action}`}>
             <ButtonBlack type="button">другие работы</ButtonBlack>
-         </AnimationRotate2>
+         </AnimationRotate2> */}
       </div>
    );
 };

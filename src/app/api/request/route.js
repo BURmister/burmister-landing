@@ -32,3 +32,73 @@ export async function POST(request) {
       return NextResponse.json({ error: true, message: response?.error?.message, log: response }, { status: response?.error?.status });
    return NextResponse.json({ data: response.data }, { status: 200 });
 }
+
+/* Проверка капчи
+const https = require('https'),
+    querystring = require('querystring');
+
+const SMARTCAPTCHA_SERVER_KEY = "<ключ_сервера>";
+
+
+function check_captcha(token, callback) {
+    const postData = querystring.stringify({
+        secret: SMARTCAPTCHA_SERVER_KEY,
+        token: token,
+        ip: '<IP-адрес_пользователя>', // Способ получения IP-адреса пользователя зависит от вашего фреймворка и прокси.
+    });
+
+    const options = {
+        hostname: 'smartcaptcha.yandexcloud.net',
+        port: 443,
+        path: '/validate',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Length': Buffer.byteLength(postData),
+        },
+    };
+
+    const req = https.request(options, (res) => {
+        let content = '';
+
+        res.on('data', (chunk) => {
+            content += chunk;
+        });
+
+        res.on('end', () => {
+            if (res.statusCode !== 200) {
+                console.error(`Allow access due to an error: code=${res.statusCode}; message=${content}`);
+                callback(true);
+                return;
+            }
+
+            try {
+                const parsedContent = JSON.parse(content);
+                callback(parsedContent.status === 'ok');
+            } catch (err) {
+                console.error('Error parsing response: ', err);
+                callback(true);
+            }
+        });
+    });
+
+    req.on('error', (error) => {
+        console.error(error);
+        callback(true);
+    });
+
+    // Write the POST data to the request body
+    req.write(postData);
+    req.end();
+}
+
+
+let token = "<токен>";
+check_captcha(token, (passed) => {
+    if (passed) {
+        console.log("Passed");
+    } else {
+        console.log("Robot");
+    }
+});
+*/

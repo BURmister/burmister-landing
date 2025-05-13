@@ -1,9 +1,9 @@
 'use client';
 import { ButtonBlack } from '@shared/button';
-import { usePopupStore } from '@stores/popup/form';
+// import { usePopupStore } from '@stores/popup';
 
 const ActionCallback = () => {
-   const { setOpen } = usePopupStore((store) => store);
+   // const { setOpen } = usePopupStore((store) => store);
    const handleClick = () => {
       document.getElementById('FormWrapper')?.scrollIntoView({ behavior: 'smooth' });
    };
