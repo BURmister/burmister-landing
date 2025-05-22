@@ -15,6 +15,7 @@ const ContactForm = ({ className }) => {
 
    const onSubmit = async (event) => {
       if (event && event.preventDefault) event.preventDefault();
+      return;
       const formData = new FormData(form.current);
 
       if (!formData || loading || success) return;
@@ -67,6 +68,9 @@ const ContactForm = ({ className }) => {
          </div>
          <TextareaGrey className={`${styles.textarea}`} type="text" name="COMMENT" id="comment" title="Комментарий" />
          <ButtonBlack type="submit">отправить</ButtonBlack>
+         <div className={`${styles.stub} flex items-center justify-center rounded-16`}>
+            <p class="text-16 text-center text-pretty">Форма пока не работает, чтобы не&nbsp;собирать персональные данные</p>
+         </div>
       </form>
    );
 };
