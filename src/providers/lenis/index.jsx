@@ -1,10 +1,10 @@
 'use client';
 import { useEffect } from 'react';
-import Lenis from 'lenis';
+import { initLenis } from '@hooks/lenis';
 
 const LenisProvider = () => {
    useEffect(() => {
-      const lenis = new Lenis({
+      const lenis = initLenis({
          lerp: 0.08,
          duration: 1.5,
          smoothWheel: true,
@@ -22,7 +22,7 @@ const LenisProvider = () => {
       };
    }, []);
 
-   return null; // Ничего не рендерим, компонент просто добавляет плавную прокрутку
+   return null;
 };
 
 export default LenisProvider;

@@ -1,0 +1,47 @@
+.wrapper {
+   --padding-inside: 28px;
+
+   top: 0;
+   left: 0;
+
+   width: 100vw;
+   height: 100vh;
+
+   align-items: center;
+   justify-content: center;
+
+   z-index: 1000;
+
+   .overlay {
+      top: 0;
+      left: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      background: rgba(0, 0, 0, 0.5);
+
+      backdrop-filter: blur(3px);
+      z-index: -1;
+   }
+
+   .popup {
+      padding: var(--padding-inside);
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+   }
+
+   .close {
+      --icon-size: 24px;
+
+      top: calc(var(--padding-inside) * 0.5 - var(--icon-size) * 0.5);
+      right: calc(var(--padding-inside) * 0.5 - var(--icon-size) * 0.5);
+
+      .closeIcon {
+         width: var(--icon-size);
+         height: var(--icon-size);
+      }
+   }
+}

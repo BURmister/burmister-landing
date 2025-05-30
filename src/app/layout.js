@@ -4,6 +4,7 @@ import '@config/styles/global.scss';
 import Header from '@widgets/header';
 import Footer from '@widgets/footer';
 import ScrollIndicator from '@widgets/indicator';
+import { PopupWrapper } from '@widgets/popup';
 import { LenisProvider } from '@/src/providers/';
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
             <Header />
             <ScrollIndicator />
             <main>{children}</main>
+            <PopupWrapper />
             <Footer />
          </body>
       </html>

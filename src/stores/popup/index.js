@@ -1,16 +1,26 @@
 import { create } from 'zustand';
+import { getLenis } from '@hooks/lenis';
+import { popupComponents } from '@hooks/popup';
 
-export const usePopupStore = create((set) => ({
+export const usePopupStore = create((set, get) => ({
    isOpen: false,
-   setOpen: () =>
-      set(() => {
-         document.documentElement.style.overflow = 'hidden';
-         console.log('open popup');
-         return { isOpen: true };
-      }),
-   setClose: () =>
-      set(() => {
-         document.documentElement.style.overflow = 'auto';
-         return { isOpen: false };
-      }),
+   content: null,
+
+   setOpenComponent: (key) => {
+      const Component = popupComponents[key];
+      if (!Component) return console.warn(`Нет попапа с ключом: ${key}`);
+      get().setOpen(<Component />);
+   },
+
+   setOpen: (element) => {
+      const lenis = getLenis();
+      lenis?.stop(); // ← теперь работает
+      set({ isOpen: true, content: element });
+   },
+
+   setClose: () => {
+      const lenis = getLenis();
+      lenis?.start(); // ← и это тоже
+      set({ isOpen: false, content: null });
+   },
 }));
