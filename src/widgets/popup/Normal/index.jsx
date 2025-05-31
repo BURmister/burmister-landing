@@ -1,6 +1,6 @@
 'use client';
 import { usePopupStore } from '@stores/popup';
-import {PopupWrapper} from '@widgets/popup';
+import { PopupWrapper } from '@widgets/popup';
 import styles from './styles.module.scss';
 
 const Popup = ({ className = {}, closeOnClickOutside = true }) => {
@@ -11,8 +11,8 @@ const Popup = ({ className = {}, closeOnClickOutside = true }) => {
    };
 
    return (
-      <PopupWrapper isOpen={isOpen} handleOverlayClick={() => handleOverlayClick()}>
-         <div className={`relative background-white rounded-16 ${styles.popup} ${className.popup}`}>{content}</div>
+      <PopupWrapper className={{ content: styles.contentWrapper }} isOpen={isOpen} handleOverlayClick={() => handleOverlayClick()}>
+         <div className={`relative w-fit background-white rounded-16 ${styles.popup} ${className.popup}`}>{content}</div>
       </PopupWrapper>
    );
 };

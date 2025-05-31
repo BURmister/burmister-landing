@@ -6,10 +6,10 @@ import styles from './styles.module.scss';
 
 const Header = () => {
    return (
-      <header className={`${styles.header}`}>
+      <header className={`${styles.header} pointer-events-none`}>
          <div className={`content-wrapper ${styles.wrapper} flex `}>
-            <Logo />
-            <div className={`${styles.actions} flex`}>
+            <Logo className={`pointer-events-auto`} />
+            <div className={`pointer-events-auto ${styles.actions} flex`}>
                <ActionCallback />
                {/* <ButtonGrey type="button">меню</ButtonGrey> */}
             </div>
