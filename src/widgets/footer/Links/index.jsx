@@ -7,10 +7,10 @@ const Links = () => {
    return (
       <div className={`${styles.network} flex flex-col`}>
          <div className={`${styles.sublist} flex flex-col`}>
-            <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
+            <Link target="_blank" href="https://github.com/burmister" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                Github
             </Link>
-            <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
+            <Link target="_blank" href="https://t.me/bur_mister" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                Telegram
             </Link>
             {/* <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>

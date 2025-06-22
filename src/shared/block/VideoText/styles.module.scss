@@ -35,7 +35,7 @@
    }
 
    .textWrapper {
-      gap: var(--block-gap);
+      gap: var(--normal-gap);
 
       .text {
          gap: var(--normal-gap);
@@ -48,7 +48,7 @@
       @media (max-width: 991px) {
          grid-column-start: 4;
          grid-column-end: calc(var(--column-count) + 1);
-         gap: var(--normal-gap);
+         // gap: var(--normal-gap);
       }
    }
 

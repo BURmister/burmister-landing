@@ -69,7 +69,7 @@ const ContactForm = ({ className }) => {
          </div>
          <TextareaGrey className={`${styles.textarea}`} type="text" name="COMMENT" id="comment" title="Комментарий" />
          <Text className={`text-grey2 text-18`}>Отправляя форму, вы соглашаетесь с политикой конфиденциальности</Text>
-         <ButtonBlack type="submit">отправить</ButtonBlack>
+         <ButtonBlack type="submit">Отправить</ButtonBlack>
          <div className={`${styles.stub} flex items-center justify-center rounded-16`}>
             <p className="text-16 text-center text-pretty">Форма пока не работает, чтобы не&nbsp;собирать персональные данные</p>
          </div>
