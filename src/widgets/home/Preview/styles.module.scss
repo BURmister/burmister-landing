@@ -21,9 +21,19 @@
 
    .imageWrapper {
       min-height: 0;
+      overflow: hidden;
 
       .image {
          max-height: 100%;
+         filter: blur(2.4px);
+      }
+
+      .lay {
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         z-index: 2;
       }
 
       @media (max-width: 1199px) and (min-width: 768px) {

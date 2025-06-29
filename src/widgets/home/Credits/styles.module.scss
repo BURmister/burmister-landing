@@ -3,11 +3,17 @@
    --section-padding-bottom: 0;
 
    .wrapper {
-      .background {
+      .backgroundWrapper {
          top: var(--section-gap);
          // margin-bottom: var(--section-gap);
          height: calc(100lvh - var(--section-gap) * 2);
          z-index: 1;
+
+         .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+         }
       }
 
       .content {

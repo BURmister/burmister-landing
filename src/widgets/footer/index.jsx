@@ -1,4 +1,5 @@
 import { ContactForm } from '@shared/form';
+import { ContactMe } from '@shared/info';
 
 import Logo from './me';
 import Copyright from './copyright';
@@ -16,6 +17,7 @@ const Footer = () => {
                <Links />
             </div>
             <ContactForm className={`${styles.form} flex`} />
+            {/* <ContactMe className={`${styles.form}`} /> */}
          </div>
          <div className={`content-wrapper ${styles.bottom} flex flex-col`}>
             <Copyright />
