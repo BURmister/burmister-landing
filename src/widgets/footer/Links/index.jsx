@@ -18,17 +18,20 @@ const Links = () => {
             <AnimationFade>
                <Text className={`text-20`}>по вопросам сотрудничества</Text>
             </AnimationFade>
-            <Link target="_blank" href="https://t.me/bur_mister" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
+            {/* <Link target="_blank" href="https://t.me/bur_mister" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                Telegram
             </Link>
             <Link target="_blank" href="https://wa.me/+79015200302" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                WhatsApp
-            </Link>
+            </Link> */}
             <Link href="mailto:burmister.pro@gmail.com" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                hello@burmister.pro
             </Link>
          </div>
          {/* <div className={`${styles.sublist} flex flex-col`}>
+            <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
+               Бюро Буракова
+            </Link>
             <Link href="#" className={`text-32 will-blue will-underline whitespace-nowrap w-fit`}>
                Qretex
             </Link>

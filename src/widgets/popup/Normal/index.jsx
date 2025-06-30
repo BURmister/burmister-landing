@@ -12,7 +12,7 @@ const Popup = ({ className = {}, closeOnClickOutside = true }) => {
 
    return (
       <PopupWrapper className={{ content: styles.contentWrapper }} isOpen={isOpen} handleOverlayClick={() => handleOverlayClick()}>
-         <div className={`relative w-fit background-white rounded-16 ${styles.popup} ${className.popup}`}>{content}</div>
+         <div className={`relative w-fit background-grey-bg rounded-16 ${styles.popup} ${className.popup}`}>{content}</div>
       </PopupWrapper>
    );
 };

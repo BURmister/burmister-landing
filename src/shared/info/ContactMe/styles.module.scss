@@ -1,9 +1,35 @@
 .wrapper {
-   .other {
-      flex: 2;
-   }
+   gap: var(--normal-gap);
 
-   .qr {
-      flex: 1;
+   .list {
+      gap: calc(var(--small-gap) * 0.5);
+
+      .item {
+         padding: 8px 16px;
+         height: 80px;
+         width: 100%;
+
+         .qr {
+            width: auto;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: unset;
+
+            transition: all 0.24s ease-in;
+
+            @media (pointer: fine) {
+               &.disabled {
+                  opacity: 0.8;
+                  filter: blur(2px);
+                  transition: all 0.32s ease-out;
+               }
+            }
+         }
+
+         @media (max-width: 576px) {
+            height: 64px;
+            padding: 6px 12px;
+         }
+      }
    }
 }

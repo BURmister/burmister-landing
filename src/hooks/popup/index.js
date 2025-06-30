@@ -6,5 +6,9 @@ export const popupComponents = {
       loading: () => <div>Загрузка...</div>,
       ssr: false,
    }),
+   ContactMe: dynamic(() => import('@shared/info').then((mod) => mod.ContactMe), {
+      loading: () => <div>Загрузка...</div>,
+      ssr: false,
+   }),
    // добавляешь сюда любые другие попапы
 };

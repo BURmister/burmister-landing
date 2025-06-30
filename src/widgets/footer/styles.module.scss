@@ -25,20 +25,30 @@
          }
       }
 
-      .form {
-         @media (max-width: 1199px) {
+
+
+      @media (max-width: 1199px) and (min-width: 768px) {
+         grid-template-columns: repeat(3, 1fr);
+
+         .contact,
+         .form {
             grid-column: span 2;
          }
       }
 
-      @media (max-width: 1199px) {
-         grid-template-columns: repeat(3, 1fr);
+      @media (max-width: 767px) {
+         grid-template-columns: repeat(2, 1fr);
+         gap: var(--small-gap);
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: 575px) {
          display: flex;
          flex-direction: column-reverse;
          gap: var(--block-gap);
+
+         .contact {
+            width: 100%;
+         }
       }
    }
 

@@ -11,13 +11,13 @@ import styles from './styles.module.scss';
 const Footer = () => {
    return (
       <footer className={`${styles.footer} flex flex-col`}>
-         <div className={`content-wrapper ${styles.top} flex `} id="FormWrapper">
+         <div className={`content-wrapper ${styles.top} flex items-baseline`} id="FormWrapper">
             <div className={`${styles.contacts} flex`}>
                <Logo />
                <Links />
             </div>
-            <ContactForm className={`${styles.form} flex`} />
-            {/* <ContactMe className={`${styles.form}`} /> */}
+            {/* <ContactForm className={`${styles.form} flex`} /> */}
+            <ContactMe className={`${styles.contact}`} />
          </div>
          <div className={`content-wrapper ${styles.bottom} flex flex-col`}>
             <Copyright />
@@ -28,3 +28,4 @@ const Footer = () => {
 };
 
 export default Footer;
+//
