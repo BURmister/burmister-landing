@@ -22,7 +22,7 @@ const Credits = ({ data }) => {
                trigger: container,
                start: '0% 20%',
                end: `0% 20%`,
-               markers: true,
+               // markers: true,
                scrub: 2,
             },
             width: '110vw',
