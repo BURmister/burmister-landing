@@ -9,42 +9,31 @@ import styles from './styles.module.scss';
 
 const Credits = ({ data }) => {
    const backgroundRef = useRef(null);
+   const containerRef = useRef(null);
 
    useEffect(() => {
       const background = backgroundRef.current;
-      if (!background) return;
+      const container = containerRef.current;
+      if (!background || !container) return;
 
       createAnimation(() => {
-         // gsap.to(background, {
-         //    scrollTrigger: {
-         //       trigger: background,
-         //       start: '0% 50%',
-         //       end: '100% 50%',
-         //       markers: true,
-         //       scrub: true,
-         //    },
-         //    width: '110vw',
-         //    height: '110lvh',
-         //    yoyo: true,
-         // });
-         // gsap.to(background, {
-         //    scrollTrigger: {
-         //       trigger: background,
-         //       start: '0% 50%',
-         //       end: '100% 50%',
-         //       markers: true,
-         //       scrub: true,
-         //    },
-         //    width: '100%',
-         //    height: '100%',
-         //    yoyo: true,
-         // });
+         gsap.to(background, {
+            scrollTrigger: {
+               trigger: container,
+               start: '0% 20%',
+               end: `0% 20%`,
+               markers: true,
+               scrub: 2,
+            },
+            width: '110vw',
+            height: '100lvh',
+         });
       });
    }, []);
 
    return (
       <Section className={`relative ${styles.section}`}>
-         <div className={`content-wrapper ${styles.wrapper} flex flex-col`}>
+         <div ref={containerRef} className={`content-wrapper ${styles.wrapper} flex flex-col`}>
             <div className={`sticky flex flex-col justify-center items-center ${styles.backgroundWrapper}`}>
                <div ref={backgroundRef} className={`${styles.background} background-grey rounded-32`}></div>
             </div>
@@ -56,9 +45,6 @@ const Credits = ({ data }) => {
                            {item.Text}
                         </p>
                      ))}
-                     {/* <p className={`caption-64 text-center`}>Предприниматель</p> */}
-                     {/* <p className={`caption-64 text-center`}>Проектный стратег</p> */}
-                     {/* <p className={`caption-64 text-center`}>Основатель Qretex</p> */}
                   </div>
                )}
                {data?.Goal && (

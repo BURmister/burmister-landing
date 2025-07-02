@@ -48,7 +48,6 @@ const ContactForm = ({ className }) => {
       }
 
       const response = await localFetch(`request`, { method: 'POST', body: { data } }, true);
-      console.log(response);
       setLoading(() => false);
 
       if (response?.error) {

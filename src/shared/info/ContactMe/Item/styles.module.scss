@@ -1,0 +1,39 @@
+.item {
+   padding: 8px 16px;
+   height: 80px;
+   width: 100%;
+
+   // p {
+   //    transition: all 0.24s ease-in;
+   // }
+
+   .qr {
+      width: auto;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: unset;
+
+      transition: all 0.24s ease-in;
+
+      @media (max-width: 576px) {
+         // display: none;
+      }
+   }
+
+   @media (pointer: fine) {
+      &.disabled {
+
+         // p,
+         .qr {
+            opacity: 0.8;
+            filter: blur(2px);
+            transition: all 0.32s ease-out;
+         }
+      }
+   }
+
+   @media (max-width: 576px) {
+      height: 64px;
+      padding: 6px 12px;
+   }
+}
