@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-// import gsap from 'gsap';
+import gsap from 'gsap';
 
-// import { createAnimation } from '@/src/hooks/gsap';
+import { createAnimation } from '@/src/hooks/gsap';
 import Section from '@widgets/home/Section';
 import styles from './styles.module.scss';
 
@@ -11,31 +11,31 @@ const Credits = ({ data }) => {
    const backgroundRef = useRef(null);
    const containerRef = useRef(null);
 
-   // useEffect(() => {
-   //    const background = backgroundRef.current;
-   //    const container = containerRef.current;
-   //    if (!background || !container) return;
+   useEffect(() => {
+      const background = backgroundRef.current;
+      const container = containerRef.current;
+      if (!background || !container) return;
 
-   //    createAnimation(() => {
-   //       gsap.to(background, {
-   //          scrollTrigger: {
-   //             trigger: container,
-   //             start: '0% 20%',
-   //             end: `0% 20%`,
-   //             // markers: true,
-   //             scrub: 2,
-   //          },
-   //          width: '110vw',
-   //          height: '100lvh',
-   //       });
-   //    });
-   // }, []);
+      createAnimation(() => {
+         gsap.to(background, {
+            scrollTrigger: {
+               trigger: container,
+               start: '0% 20%',
+               end: `0% 20%`,
+               // markers: true,
+               scrub: 2,
+            },
+            width: '110vw',
+            height: '100lvh',
+         });
+      });
+   }, []);
 
    return (
       <Section className={`relative ${styles.section}`}>
          <div ref={containerRef} className={`content-wrapper ${styles.wrapper} flex flex-col`}>
             <div className={`sticky flex flex-col justify-center items-center ${styles.backgroundWrapper}`}>
-               <div ref={backgroundRef} className={`${styles.background} background-grey rounded-32`}></div>
+               <div ref={backgroundRef} className={`${styles.background} background-grey-3 rounded-32`}></div>
             </div>
             <div className={`${styles.content} flex flex-col`}>
                {data?.Roles?.length && (

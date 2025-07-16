@@ -11,7 +11,11 @@ const Value = ({ data }) => {
          <div className={`relative content-wrapper ${styles.content} flex`}>
             <List data={data?.List} />
             <div className={`${styles.mediaWrapper}`}>
-               <Video className={`${styles.media}`} src={data?.Media?.url} type={data?.Media?.mime} />
+               {data?.Media?.url && (
+                  <>
+                     <Video className={`${styles.media}`} src={data?.Media?.url} type={data?.Media?.mime} />
+                  </>
+               )}
             </div>
          </div>
       </Section>

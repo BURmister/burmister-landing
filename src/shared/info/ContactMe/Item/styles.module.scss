@@ -13,7 +13,7 @@
       aspect-ratio: 1 / 1;
       border-radius: unset;
 
-      transition: all 0.24s ease-in;
+      transition: all 0.16s ease-in;
 
       @media (max-width: 576px) {
          // display: none;
@@ -25,9 +25,9 @@
 
          // p,
          .qr {
-            opacity: 0.8;
-            filter: blur(2px);
-            transition: all 0.32s ease-out;
+            opacity: 0.24;
+            // filter: blur(2px);
+            transition: all 0.24s ease-out;
          }
       }
    }

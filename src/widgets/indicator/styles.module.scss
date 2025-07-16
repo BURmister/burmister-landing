@@ -3,8 +3,11 @@
 
    top: 25lvh;
    right: var(--small-gap);
+
    height: 50lvh;
    width: var(--width);
+
+   z-index: 123;
 
    .wrapper {
       width: var(--width);

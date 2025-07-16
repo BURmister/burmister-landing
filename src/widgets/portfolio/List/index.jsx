@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 
-import { AnimationRotate2 } from '@shared/animation';
-import { ButtonBlack } from '@shared/button';
+// import { AnimationRotate2 } from '@shared/animation';
+// import { ButtonBlack } from '@shared/button';
 import { PortfolioCard } from '@shared/card';
 
 import styles from './styles.module.scss';
