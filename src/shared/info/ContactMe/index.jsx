@@ -25,7 +25,7 @@ const ContactMe = ({ className }) => {
 
    return (
       <div className={`${className && className} ${styles.wrapper} flex flex-col`}>
-         <p className={`caption-40 text-pretty`}>Один клик — и мы на связи</p>
+         <p className={`caption-40 text-pretty`}>Один клик — и мы на связи.</p>
          <div className={`${styles.list} flex flex-col`}>
             {CONTACTS.map((contact, index) => (
                <Fragment key={index}>

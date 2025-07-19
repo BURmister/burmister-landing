@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import parse from 'html-react-parser';
 import gsap from 'gsap';
 
 import { createAnimation } from '@/src/hooks/gsap';
@@ -42,7 +43,7 @@ const Credits = ({ data }) => {
                   <div className={`${styles.sublist} flex flex-col`}>
                      {data?.Roles?.map((item, index) => (
                         <p key={index} className={`caption-64 text-center`}>
-                           {item.Text}
+                           {parse(item.Text)}
                         </p>
                      ))}
                   </div>

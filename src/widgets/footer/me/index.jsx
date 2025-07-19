@@ -16,7 +16,10 @@ const Me = ({ className }) => {
    }, []);
    return (
       <div ref={text} className={`${className && className} flex flex-col`}>
-         <h3 className={`text-32 whitespace-nowrap`}>Олег Бурмистров</h3>
+         <h3 className={`text-32 whitespace-nowrap`}>
+            Олег Бурмистров. <br />
+            Разработчик.
+         </h3>
       </div>
    );
 };

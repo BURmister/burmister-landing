@@ -10,9 +10,9 @@ import styles from './styles.module.scss';
 const VideoText = ({ video, text }) => {
    return (
       <div className={`content-wrapper ${styles.content} flex`}>
-         {video?.src && (
+         {video && (
             <div className={`${styles.mediaWrapper}`}>
-               <Video className={`${styles.media} ${video.className && video.className}`} src={video.src} type={video.type} />
+               {video && <Video className={`${styles.media} ${video.className && video.className}`} src={video.src} type={video.type} />}
             </div>
          )}
          <div className={`flex flex-col ${styles.textWrapper}`}>

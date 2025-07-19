@@ -2,7 +2,7 @@
 import { ButtonBlack } from '@shared/button';
 import { usePopupStore } from '@stores/popup';
 
-const ActionCallback = () => {
+const ActionCallback = ({ title }) => {
    const setOpenComponent = usePopupStore((store) => store.setOpenComponent);
    const handleClick = () => {
       setOpenComponent('ContactForm');
@@ -11,7 +11,7 @@ const ActionCallback = () => {
 
    return (
       <ButtonBlack type="button" callback={() => handleClick()}>
-         На связи
+         {title || 'На связи'}
       </ButtonBlack>
    );
 };

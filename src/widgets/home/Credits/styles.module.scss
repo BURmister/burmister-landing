@@ -20,11 +20,11 @@
       .content {
          padding-top: var(--section-gap);
          padding-bottom: calc(100lvh - var(--section-gap));
-         gap: 30lvh;
+         gap: 25lvh;
          z-index: 2;
 
          .sublist {
-            gap: var(--block-gap);
+            gap: calc(var(--block-gap) * 0.5);
          }
       }
    }

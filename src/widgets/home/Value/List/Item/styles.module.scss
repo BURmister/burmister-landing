@@ -1,3 +1,27 @@
 .Item {
-   gap: calc(var(--small-gap) * 0.5);
+   --icon-size: 50px;
+   --gap: calc(var(--small-gap) * 0.5);
+
+   .Title {
+      gap: var(--gap);
+
+      .Icon {
+         svg {
+            width: var(--icon-size);
+            height: var(--icon-size);
+         }
+      }
+   }
+
+   .IconMargin {
+      margin-left: calc(var(--icon-size) + var(--gap));
+   }
+
+   @media (max-width: 991px) {
+      --icon-size: 44px;
+   }
+
+   @media (max-width: 767px) {
+      --icon-size: 32px;
+   }
 }

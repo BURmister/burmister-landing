@@ -1,8 +1,4 @@
 .textWrapper {
-   gap: var(--block-gap);
-
-   @media (min-width: 992px) {
-      padding-top: calc(var(--block-gap) * 0.5);
-      padding-bottom: calc(var(--block-gap) * 0.5);
-   }
+   grid-column: span 8;
+   gap: var(--normal-gap);
 }

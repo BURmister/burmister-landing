@@ -3,18 +3,12 @@ import { Fragment } from 'react';
 import { Text } from '@shared/text';
 import { ActionCallback } from '@shared/action';
 import { AnimationFade, AnimationRotate2 } from '@shared/animation';
-import { Video } from '@shared/media';
 
 import styles from './styles.module.scss';
 
-const VideoText = ({ video, text }) => {
+const TextAction = ({ text }) => {
    return (
-      <div className={`content-wrapper ${styles.content} flex`}>
-         {video?.src && (
-            <div className={`${styles.mediaWrapper}`}>
-               <Video className={`${styles.media} ${video.className && video.className}`} src={video.src} type={video.type} />
-            </div>
-         )}
+      <div className={`content-wrapper ${styles.content} flex flex-col`}>
          <div className={`flex flex-col ${styles.textWrapper}`}>
             {text && (
                <div className={`flex flex-col ${styles.text}`}>
@@ -33,12 +27,17 @@ const VideoText = ({ video, text }) => {
                   )}
                </div>
             )}
+         </div>
+         <div className={`flex flex-col ${styles.actionWrapper}`}>
+            <AnimationFade>
+               <Text className="text-32" data={'Сделаем ваш проект лучшим.'} />
+            </AnimationFade>
             <AnimationRotate2>
-               <ActionCallback />
+               <ActionCallback title={'Напишите Привет!'} />
             </AnimationRotate2>
          </div>
       </div>
    );
 };
 
-export default VideoText;
+export default TextAction;

@@ -63,7 +63,7 @@ const PortfolioCard = ({ data, index }) => {
    }, []);
 
    return (
-      <Link ref={cardRef} className={`${styles.card} flex flex-col will-blue`} href="#">
+      <Link ref={cardRef} className={`${styles.card} flex flex-col will-blue`} target="_blank" href={data?.Link}>
          <Image ref={imageRef} className={`rounded-24 ${styles.image}`} src={data?.Preview?.url} width={790} height={385} alt={data?.Name} />
          <div className={`flex flex-col`}>
             {data?.Description && (

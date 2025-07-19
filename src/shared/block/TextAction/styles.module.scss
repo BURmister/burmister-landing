@@ -1,0 +1,33 @@
+.content {
+   align-items: baseline;
+   row-gap: calc(var(--block-gap) * 0.5);
+
+   .textWrapper {
+      grid-column: span 6;
+      gap: var(--normal-gap);
+
+      .text {
+         gap: var(--normal-gap);
+      }
+   }
+
+   .actionWrapper {
+      --gap: 10px;
+      gap: var(--gap);
+   }
+
+   @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      .textWrapper {
+         grid-column: span 6;
+      }
+
+      .actionWrapper {
+         margin-left: var(--block-gap);
+         grid-column: span 6;
+         --gap: 16px;
+      }
+   }
+}
