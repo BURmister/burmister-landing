@@ -30,4 +30,12 @@
    .content {
       pointer-events: auto;
    }
+
+   @media (max-width: 991px) {
+      --padding-inside: 20px;
+   }
+
+   @media (max-width: 575px) {
+      --padding-inside: 16px;
+   }
 }
