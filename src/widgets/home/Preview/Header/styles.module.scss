@@ -4,11 +4,11 @@
 
    .titleWrapper {
       grid-column-start: 4;
-      grid-column-end: 8;
+      grid-column-end: 9;
 
-      @media (max-width: 1919px) {
-         grid-column-end: 9;
-      }
+      // @media (max-width: 1919px) {
+      //    grid-column-end: 9;
+      // }
    }
 
    @media (min-width: 1199px) {
