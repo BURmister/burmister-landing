@@ -1,11 +1,12 @@
 .section {
    --section-padding-top: var(--block-gap);
    --section-padding-bottom: 0;
+   margin-bottom: var(--section-gap);
 
    .wrapper {
       .backgroundWrapper {
          top: var(--section-gap);
-         margin-bottom: var(--section-gap);
+         // margin-bottom: var(--section-gap);
          height: calc(100lvh - var(--section-gap) * 2);
          z-index: 1;
 
@@ -18,7 +19,7 @@
       }
 
       .content {
-         padding-top: var(--section-gap);
+         // padding-top: var(--section-gap);
          padding-bottom: calc(100lvh - var(--section-gap));
          gap: 25lvh;
          z-index: 2;
