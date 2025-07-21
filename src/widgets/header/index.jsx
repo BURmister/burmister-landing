@@ -10,7 +10,7 @@ const Header = () => {
          <div className={`content-wrapper ${styles.wrapper} flex `}>
             <Logo className={`pointer-events-auto`} />
             <div className={`pointer-events-auto ${styles.actions} flex`}>
-               <ActionCallback />
+               <ActionCallback title="Обсудить проект" />
                {/* <ButtonGrey type="button">меню</ButtonGrey> */}
             </div>
          </div>

@@ -9,6 +9,14 @@ import styles from './styles.module.scss';
 const TextAction = ({ text }) => {
    return (
       <div className={`content-wrapper ${styles.content} flex flex-col`}>
+         <div className={`flex flex-col ${styles.actionWrapper}`}>
+            <AnimationFade>
+               <Text className="text-32" data={'Сделаем ваш проект лучшим.'} />
+            </AnimationFade>
+            <AnimationRotate2>
+               <ActionCallback title={'Напишите привет'} />
+            </AnimationRotate2>
+         </div>
          <div className={`flex flex-col ${styles.textWrapper}`}>
             {text && (
                <div className={`flex flex-col ${styles.text}`}>
@@ -27,14 +35,6 @@ const TextAction = ({ text }) => {
                   )}
                </div>
             )}
-         </div>
-         <div className={`flex flex-col ${styles.actionWrapper}`}>
-            <AnimationFade>
-               <Text className="text-32" data={'Сделаем ваш проект лучшим.'} />
-            </AnimationFade>
-            <AnimationRotate2>
-               <ActionCallback title={'Напишите Привет!'} />
-            </AnimationRotate2>
          </div>
       </div>
    );
