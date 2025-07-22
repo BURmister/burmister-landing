@@ -1,4 +1,5 @@
 .content {
+   flex-direction: column-reverse;
    align-items: baseline;
    row-gap: calc(var(--block-gap) * 0.5);
 

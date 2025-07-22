@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 const TextAction = ({ text }) => {
    return (
-      <div className={`content-wrapper ${styles.content} flex flex-col`}>
+      <div className={`content-wrapper ${styles.content} flex`}>
          <div className={`flex flex-col ${styles.actionWrapper}`}>
             <AnimationFade>
                <Text className="text-32" data={'Сделаем ваш проект лучшим.'} />
