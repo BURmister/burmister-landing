@@ -1,8 +1,8 @@
 'use client';
-import { ButtonBlack } from '@shared/button';
+import { ButtonBlack, ButtonGrey } from '@shared/button';
 import { usePopupStore } from '@stores/popup';
 
-const ActionCallback = ({ title }) => {
+const ActionCallback = ({ title, color = 'black' }) => {
    const setOpenComponent = usePopupStore((store) => store.setOpenComponent);
    const handleClick = () => {
       setOpenComponent('ContactForm');
@@ -10,9 +10,17 @@ const ActionCallback = ({ title }) => {
    };
 
    return (
-      <ButtonBlack type="button" callback={() => handleClick()}>
-         {title || 'На связи'}
-      </ButtonBlack>
+      <>
+         {color === 'grey' ? (
+            <ButtonGrey type="button" callback={() => handleClick()}>
+               {title || 'На связи'}
+            </ButtonGrey>
+         ) : (
+            <ButtonBlack type="button" callback={() => handleClick()}>
+               {title || 'На связи'}
+            </ButtonBlack>
+         )}
+      </>
    );
 };
 

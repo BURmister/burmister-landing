@@ -3,6 +3,51 @@
 }
 
 .caption {
+   &-96nn {
+      font-size: 96px;
+      line-height: 110%;
+
+      @media (max-width: 1919px) {
+         font-size: 80px
+      }
+
+      // @media (max-width: 1399px) {
+      //    font-size: 64px;
+      // }
+
+      @media (max-width: 1199px) {
+         font-size: 64px;
+      }
+
+      @media (max-width: 991px) {
+         font-size: 52px;
+      }
+
+      @media (max-width: 767px) {
+         font-size: 40px;
+      }
+
+      @media (max-width: 575px) {
+         font-size: 32px;
+      }
+
+      // @media (max-width: 479px) {
+      //    font-size: 24px;
+      // }
+
+      @media (max-width: 429px) {
+         font-size: 28px;
+      }
+
+      @media (max-width: 389px) {
+         font-size: 24px;
+      }
+
+      @media (max-width: 350px) {
+         font-size: 22px;
+      }
+   }
+
    &-96 {
       font-size: 96px;
       line-height: 110%;
