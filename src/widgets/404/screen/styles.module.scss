@@ -1,0 +1,10 @@
+.wrapper {
+   padding-top: calc(var(--header-height) + var(--page-gap));
+   min-height: 100svh;
+   gap: var(--small-gap);
+
+   @media (max-width: 991px) {
+      padding-top: unset;
+      justify-content: center;
+   }
+}

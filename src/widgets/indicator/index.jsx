@@ -1,12 +1,19 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 import { useWindowSize } from 'react-use';
 
 import styles from './styles.module.scss';
 
-export default function ScrollIndicator() {
+const ScrollIndicatorWrapper = () => {
+   const pathname = usePathname();
+
+   return <ScrollIndicator key={pathname} />;
+};
+
+const ScrollIndicator = () => {
    const { scrollYProgress } = useScroll();
    const { height: windowHeight } = useWindowSize(); // Следим за высотой окна
 
@@ -52,4 +59,6 @@ export default function ScrollIndicator() {
          </motion.div>
       </motion.div>
    );
-}
+};
+
+export default ScrollIndicatorWrapper;

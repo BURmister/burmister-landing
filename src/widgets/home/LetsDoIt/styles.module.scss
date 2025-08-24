@@ -1,5 +1,7 @@
 .section {
    --section-padding-bottom: 0;
+   margin-bottom: var(--page-gap);
+
    min-height: 50svh;
    justify-content: center;
 
