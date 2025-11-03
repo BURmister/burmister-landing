@@ -16,6 +16,7 @@ const Portfolio = async ({ data }) => {
                $in: PorfolioFilter,
             },
          },
+         sort: ['Sort:desc'],
       },
       {
          encodeValuesOnly: true,

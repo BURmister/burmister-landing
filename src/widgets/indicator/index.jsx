@@ -9,6 +9,21 @@ import styles from './styles.module.scss';
 
 const ScrollIndicatorWrapper = () => {
    const pathname = usePathname();
+   const [isMobile, setIsMobile] = useState(false);
+
+   useEffect(() => {
+      // Проверяем ширину экрана
+      const handleResize = () => {
+         setIsMobile(window.innerWidth < 992);
+      };
+
+      handleResize(); // вызываем сразу при монтировании
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+   }, []);
+
+   if (isMobile) return null; // не рендерим при >= 992px
 
    return <ScrollIndicator key={pathname} />;
 };
