@@ -7,7 +7,7 @@ const componentMap = {
    Beyond,
    Credits,
    Value,
-   Experience,
+   // Experience,
    Portfolio,
    Statistics,
    LetsDoIt,

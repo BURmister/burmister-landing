@@ -14,7 +14,7 @@ const TextAction = ({ text }) => {
                <Text className="text-32" data={'Сделаем ваш проект лучшим.'} />
             </AnimationFade>
             <AnimationRotate2>
-               <ActionCallback title={'Напишите привет'} />
+               <ActionCallback title={'Расскажите о нём'} />
             </AnimationRotate2>
          </div>
          <div className={`flex flex-col ${styles.textWrapper}`}>
