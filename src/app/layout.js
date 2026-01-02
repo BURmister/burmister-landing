@@ -10,9 +10,11 @@ import { LenisProvider } from '@/src/providers/';
 export const metadata = {
    title: 'Олег Бурмистров | Burmister',
    description: 'Создание сайтов в Москве и Московской области. Дизайн и разработка веб-приложений.',
-   ogTitle: 'Олег Бурмистров | Burmister',
-   ogDescription: 'Создание сайтов в Москве и Московской области. Дизайн и разработка веб-приложений.',
-   ogImage: '/logo-blue.png',
+   openGraph: {
+      title: 'Олег Бурмистров | Burmister',
+      description: 'Создание сайтов в Москве и Московской области. Дизайн и разработка веб-приложений.',
+      images: '/logo-blue.png',
+   },
 };
 
 export const viewport = {
