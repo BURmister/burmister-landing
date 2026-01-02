@@ -13,7 +13,7 @@ export const metadata = {
    openGraph: {
       title: 'Олег Бурмистров | Burmister',
       description: 'Создание сайтов в Москве и Московской области. Дизайн и разработка веб-приложений.',
-      images: '/logo-blue.png',
+      images: 'https://burmister.pro/logo-blue.png',
    },
 };
 
