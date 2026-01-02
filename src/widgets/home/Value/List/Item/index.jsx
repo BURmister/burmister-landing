@@ -19,7 +19,7 @@ const Item = ({ data }) => {
          if (_description) fadeAnimation({ target: _description, options: { from: { y: 64 } } });
 
          const _icon = icon.current;
-         console.log(_icon);
+         // console.log(_icon);
          if (_icon) fadeAnimation({ target: _icon, options: { from: { y: 8, opacity: 0, delay: 0.4 } } });
       });
    }, []);
